@@ -1,0 +1,55 @@
+{
+  "name": "human-ip-os",
+  "version": "2.1.0",
+  "modes": [
+    "diagnostic",
+    "brand-os",
+    "full-super-individual"
+  ],
+  "phases": 16,
+  "blocking_gates": [
+    "authenticity",
+    "credibility",
+    "human_usefulness",
+    "ethics_privacy",
+    "aspiration_as_proof"
+  ],
+  "deliverable": "[NAME]OS",
+  "subtitle": "Human & IP Diagnostic Engine",
+  "human_dna_dimensions": [
+    "EXPERIENCE",
+    "CAPABILITY",
+    "CURIOSITY",
+    "VALUE",
+    "TASTE",
+    "DESIRE"
+  ],
+  "evidence_classes": [
+    "LIVED",
+    "PROOF",
+    "REPEATED",
+    "ASPIRATIONAL"
+  ],
+  "visibility_states": [
+    "PRIVATE",
+    "CONTEXT_ONLY",
+    "PUBLIC_CANDIDATE",
+    "PUBLIC_CONFIRMED"
+  ],
+  "confirmation_states": [
+    "AI_PROPOSED",
+    "USER_CONFIRMED",
+    "USER_EDITED",
+    "USER_REJECTED"
+  ],
+  "v2_1_modules": [
+    "taste_ledger",
+    "human_dna",
+    "confirmation_protocol",
+    "privacy_provenance",
+    "positioning_lab",
+    "future_simulation",
+    "public_self_gate",
+    "proof_mission"
+  ]
+}

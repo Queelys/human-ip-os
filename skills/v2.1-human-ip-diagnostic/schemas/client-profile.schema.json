@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HUMAN-IP-OS V2.1 Client Profile",
+  "type": "object",
+  "required": [
+    "client_id",
+    "preferred_name",
+    "version",
+    "evidence"
+  ],
+  "properties": {
+    "client_id": {
+      "type": "string"
+    },
+    "preferred_name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "class",
+          "raw",
+          "strength"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "class": {
+            "enum": [
+              "LIVED",
+              "PROOF",
+              "REPEATED",
+              "ASPIRATIONAL"
+            ]
+          },
+          "raw": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "strength": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "implication": {
+            "type": "string"
+          },
+          "uncertainty": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "diagnostics": {
+      "type": "object"
+    },
+    "positioning_hypotheses": {
+      "type": "array"
+    },
+    "selected_direction": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "human_dna": {
+      "$ref": "human-dna.schema.json"
+    },
+    "taste_signals": {
+      "type": "array",
+      "items": {
+        "$ref": "taste-signal.schema.json"
+      }
+    },
+    "visibility_default": {
+      "enum": [
+        "PRIVATE",
+        "CONTEXT_ONLY",
+        "PUBLIC_CANDIDATE",
+        "PUBLIC_CONFIRMED"
+      ]
+    },
+    "confirmation_required": {
+      "type": "boolean",
+      "default": true
+    },
+    "brand_genome": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "proof_missions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}
