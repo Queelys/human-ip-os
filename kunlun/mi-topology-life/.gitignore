@@ -1,0 +1,7 @@
+node_modules/
+build/
+out/
+.remotion/
+test-results/
+*.png
+!docs/**/*.png
