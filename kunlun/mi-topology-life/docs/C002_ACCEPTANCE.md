@@ -1,6 +1,6 @@
 # ACCEPTANCE — KUNLUN-MI-C002｜MI Identity Kernel V1.0
 
-验收日期：2026-10-10 · 状态：**PASS（待人工验收）**
+验收日期：2026-10-10 · 状态：**PASS（已通过人工验收）**
 
 ## 前置条件
 
@@ -101,4 +101,8 @@ PASS  no console/page errors             0 errors
 
 ## 人工验收记录
 
-（待填写）
+- 2026-10-10：C002 通过人工验收。
+- 确认锚点标签：A1「骨 Structure」、A2「脉 Signal」、A3「息 Breath」；核心边 E12「成形 form」、E23「传导 conduct」、E31「回归 return」。
+- 确认脉冲参数：周期 3 s，宽度 0.25，相位偏移 [0, 1/3, 2/3]。
+- 确认 Φ 边界：缩放 [0.25, 3]，|扭转| ≤ π/2 rad/单位 z。
+- 身份规范 V1.0（指纹 `cd2e236379d37be5`）冻结为后续卡片的基线；变更须按 MI_IDENTITY_SPEC §6 流程进行。
