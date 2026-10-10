@@ -17,5 +17,5 @@
     "types": ["node"],
     "noEmit": true
   },
-  "include": ["src", "tests", "remotion.config.ts", "vitest.config.ts"]
+  "include": ["src", "tests", "remotion.config.ts", "vitest.config.ts", "vite.debugger.config.ts"]
 }

@@ -22,7 +22,7 @@
 
 ## 3. 身份内核（Identity Kernel）
 
-代码唯一来源：`src/core/identity.ts`（冻结对象 `MI_IDENTITY`）。
+代码唯一来源（自 C002 起）：`src/identity/miKernel.ts` 中的 `DEFAULT_MI_SPEC`，即 **MI = (G, K, A, P, Φ, σ)**，完整定义见 [docs/MI_IDENTITY_SPEC.md](docs/MI_IDENTITY_SPEC.md)，数学规则见 [docs/MI_MATH_RULES.md](docs/MI_MATH_RULES.md)。C001 使用的 `src/core/identity.ts`（`MI_IDENTITY`）是从它派生的视图。下表为 C001 时定义的拓扑摘要：
 
 | 字段 | 当前值 | 含义 |
 |---|---|---|

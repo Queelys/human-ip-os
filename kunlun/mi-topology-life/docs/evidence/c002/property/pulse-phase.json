@@ -1,0 +1,8 @@
+{
+  "name": "pulse-phase",
+  "baseSeed": 3221356545,
+  "runs": 500,
+  "passed": 500,
+  "failures": [],
+  "reproduce": "MI_PROPERTY_SEED=<caseSeed> npx vitest run tests/property.test.ts -t \"pulse-phase\""
+}

@@ -1,5 +1,8 @@
 import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {existsSync, readFileSync, statSync} from 'node:fs';
+import {createServer} from 'node:http';
+import {extname, join, normalize} from 'node:path';
 
 export const COMPOSITION = 'C001-RenderTest';
 export const ENTRY = 'src/index.ts';
@@ -33,3 +36,28 @@ export const report = (rows) => {
 	}
 	return ok;
 };
+
+const MIME = {
+	'.html': 'text/html; charset=utf-8',
+	'.js': 'text/javascript',
+	'.json': 'application/json',
+	'.css': 'text/css',
+	'.map': 'application/json',
+};
+
+/** Minimal static file server with SPA fallback to index.html. */
+export const serveStatic = (dir, port) =>
+	new Promise((resolve, reject) => {
+		if (!existsSync(join(dir, 'index.html'))) {
+			reject(new Error(`${dir}/index.html missing`));
+			return;
+		}
+		const server = createServer((req, res) => {
+			const path = normalize(decodeURIComponent(new URL(req.url, 'http://x').pathname)).replace(/^(\.\.[/\\])+/, '');
+			let file = join(dir, path);
+			if (!existsSync(file) || statSync(file).isDirectory()) file = join(dir, 'index.html');
+			res.writeHead(200, {'content-type': MIME[extname(file)] ?? 'application/octet-stream'});
+			res.end(readFileSync(file));
+		});
+		server.listen(port, () => resolve({stop: () => server.close()}));
+	});

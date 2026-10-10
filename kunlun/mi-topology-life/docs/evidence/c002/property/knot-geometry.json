@@ -1,0 +1,8 @@
+{
+  "name": "knot-geometry",
+  "baseSeed": 3221356545,
+  "runs": 200,
+  "passed": 200,
+  "failures": [],
+  "reproduce": "MI_PROPERTY_SEED=<caseSeed> npx vitest run tests/property.test.ts -t \"knot-geometry\""
+}

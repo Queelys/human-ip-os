@@ -46,3 +46,24 @@
 ## D-007 工程位置
 
 - 仓库根目录是另一个项目（HUMAN → IP → OS）。为避免覆盖，本工程独立放在 `kunlun/mi-topology-life/`，拥有自己的 `package.json` 与锁文件，不修改仓库已有文件。
+
+## D-008 C002 目录结构
+
+- 卡片要求的路径 `src/identity/`、`src/geometry/`、`src/motion/` 与 C001 的分层（内核层 / 表现层 / 镜头层）一致，直接采用。
+- C001 的 `src/core/identity.ts`（`MI_IDENTITY`）保留，但改为从 `DEFAULT_MI_SPEC` 派生种子与 (p, q)，保证身份只有一个来源。C001 的渲染代码不改；C001 的确定性哈希必须与已记录值逐位相同（已复核）。
+- `src/core/` 保留通用工具（rng、time、topology）。
+
+## D-009 调试网页使用 Vite（不新增依赖下载）
+
+- Remotion 只能打包 Studio 入口，无法生成独立的交互网页。Vite 7.3.7 已作为 vitest 的依赖存在于依赖树中，本卡只把它声明为直接 devDependency 并精确锁定（npm 去重，没有下载新包）。
+- 为 `react-dom/client` 的类型声明新增 `@types/react-dom@19.2.7`（仅类型，约 1 个包）。
+- 调试页的播放只推进整数帧号（`setInterval`），画面仍是 f(frame, params)，不使用 `useFrame`、Clock 或墙钟时间。
+
+## D-010 性质测试自建 harness，不引入 fast-check
+
+- `tests/support/property.ts` 约 100 行，基于项目已有的 Mulberry32。
+- 每个用例的种子由 (baseSeed, 名称, 序号) 派生，所有用例与失败都写入 `out/test-logs/property/*.json`，并支持 `MI_PROPERTY_SEED` 单例复现。卡片要求"记录所有失败种子和参数"，自建 harness 可以完全控制日志格式，也不增加依赖。
+
+## D-011 身份曲线的参数化
+
+- K 采用环面结参数化，与 Three.js `TorusKnotGeometry` 的中心线完全一致（a = R/2），使 C001 网格与 C002 内核共享同一条曲线，并由测试锁定。

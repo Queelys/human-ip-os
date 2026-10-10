@@ -11,13 +11,17 @@
     "preview": "remotion studio src/index.ts",
     "lint": "eslint src tests scripts",
     "typecheck": "tsc --noEmit",
-    "build": "remotion bundle src/index.ts --out-dir build",
+    "build": "remotion bundle src/index.ts --out-dir build && vite build --config vite.debugger.config.ts",
     "test": "vitest run",
     "render:test": "remotion render src/index.ts C001-RenderTest out/c001-render-test.mp4",
     "verify:video": "node scripts/verify-video.mjs out/c001-render-test.mp4 --width 1920 --height 1080 --fps 30 --frames 90 --duration 3",
     "verify:determinism": "node scripts/verify-determinism.mjs",
     "verify:preview": "node scripts/verify-preview.mjs",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "debug": "vite --config vite.debugger.config.ts",
+    "test:log": "node scripts/test-log.mjs",
+    "verify:debugger": "node scripts/verify-debugger.mjs",
+    "evidence:c002": "node scripts/collect-evidence.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "9.7.0",
@@ -33,11 +37,13 @@
     "@remotion/eslint-config-flat": "4.0.525",
     "@types/node": "22.20.5",
     "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
     "@types/three": "0.186.0",
     "eslint": "9.39.4",
     "globals": "16.4.0",
     "playwright": "1.56.1",
     "typescript": "5.9.3",
+    "vite": "7.3.7",
     "vitest": "3.2.7"
   }
 }

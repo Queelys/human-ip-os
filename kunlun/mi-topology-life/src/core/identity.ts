@@ -6,9 +6,12 @@
  * Shot/presentation layers may read from it but must never mutate it, and any
  * geometry they derive from it must keep the declared topological invariants.
  *
- * C001 only establishes the kernel shell; the full identity spec is defined
- * in FILM_BIBLE.md and will be expanded in later cards.
+ * Since C002 the authoritative identity is `DEFAULT_MI_SPEC` in
+ * src/identity/miKernel.ts. `MI_IDENTITY` is the compact view the C001 test
+ * composition consumes; its seed and knot are read from that spec so there is
+ * a single source of truth.
  */
+import {DEFAULT_MI_SPEC} from '../identity/miKernel';
 
 export type TopologicalInvariants = {
 	/** Genus of Mi's core surface (number of "handles"). */
@@ -27,13 +30,13 @@ export type MiIdentityKernel = {
 };
 
 export const MI_IDENTITY: MiIdentityKernel = Object.freeze({
-	version: '0.1.0-c001',
-	seed: 0x4b4c4d49, // "KLMI"
+	version: `c001-view/${DEFAULT_MI_SPEC.version}`,
+	seed: DEFAULT_MI_SPEC.seed,
 	invariants: Object.freeze({
 		genus: 1,
 		eulerCharacteristic: 0,
 		orientable: true,
-		knot: Object.freeze({p: 2, q: 3}),
+		knot: Object.freeze({p: DEFAULT_MI_SPEC.knot.p, q: DEFAULT_MI_SPEC.knot.q}),
 	}),
 });
 

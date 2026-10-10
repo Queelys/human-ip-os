@@ -5,3 +5,4 @@ out/
 test-results/
 *.png
 !docs/**/*.png
+build-debugger/

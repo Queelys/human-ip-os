@@ -1,0 +1,97 @@
+
+ RUN  v3.2.7 /home/user/human-ip-os/kunlun/mi-topology-life
+
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > is closed: |K(1) − K(0)| ≈ 0 1ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > tangent is continuous across the seam: K′(1) = K′(0), K″(1) = K″(0) 0ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > is 1-periodic for arbitrary parameters 0ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > analytic first/second derivatives match finite differences 4ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > is regular: min |K′| ≥ closed-form bound > 0 36ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=64 is non-degenerate 1ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=256 is non-degenerate 5ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=512 is non-degenerate 10ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=1024 is non-degenerate 31ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > records the strand separation of K (numerical, not a proof) 28ms
+ ✓ tests/property.test.ts > C002.8 property tests > legal-params: sampled Φ params validate and have scale > 0 34ms
+ ✓ tests/property.test.ts > C002.8 property tests > inverse-identity: Φ⁻¹∘Φ ≈ id and Φ∘Φ⁻¹ ≈ id for legal params 144ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > rejects degenerate sample counts 1ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > total curvature exceeds 4π (Fáry–Milnor necessary condition for a knot) 20ms
+ ✓ tests/trefoil.test.ts > C002.2 diagram check (numerical) > xy-projection has exactly 3 crossings of equal sign (trefoil diagram, fixed chirality) 103ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > phase differences between anchors are fixed on every film frame 62ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > is shift-equivariant: I_Ai(t) = I_A1(t − offset_i·T) 31ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > is periodic, bounded in [0, 1] and peaks at 1 234ms
+ ✓ tests/trefoil.test.ts > C001 ↔ C002 consistency > C001 mesh centre line is exactly K 18ms
+ ✓ tests/property.test.ts > C002.8 property tests > inverse-identity-compositions: random chains of 1–8 primitives 27ms
+ ✓ tests/property.test.ts > C002.8 property tests > orientation: Jacobian det > 0 for legal Φ (chirality preserved) 20ms
+ ✓ tests/property.test.ts > C002.8 property tests > anchor-recovery: Φ⁻¹(anchor world) = K(s) for legal Φ 27ms
+ ✓ tests/property.test.ts > C002.8 property tests > motion-time: any global time gives legal params with scale > 0 27ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > depends only on t — evaluation order does not matter 1ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > default config: pulses never overlap (width ≤ smallest phase gap) 12ms
+ ✓ tests/property.test.ts > C002.8 property tests > pulse-phase: phase differences equal the spec offsets at any time 18ms
+ ✓ tests/property.test.ts > C002.8 property tests > knot-geometry: legal radii give a closed, regular, non-degenerate sampled curve 397ms
+ ✓ tests/property.test.ts > C002.8 property tests > harness: failures are recorded with seeds and reproduce exactly via MI_PROPERTY_SEED 2ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > SO(3) rotation: orthonormal columns, det = +1, inverse exact 8ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > rotation by π about z matches closed form 0ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > positive uniform scale: inverse exact, non-positive rejected 4ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > z-twist: preserves z and distance to the z axis, inverse exact 3ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > compositions: inverse is reverse-order composition of inverses 8ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > every allowed Φ is orientation-preserving (Jacobian det > 0, so no mirror trefoil) 3ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > forbidden primitives are rejected at runtime 1ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > defaults are the identity map 1ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { scale: +0 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { scale: -1 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { scale: 3.01 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { twist: 2 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { yaw: NaN } 0ms
+ ✓ tests/deformation.test.ts > C002.4 global-time driven deformation > is a pure function of time (order independent, repeatable) 1ms
+ ✓ tests/deformation.test.ts > C002.4 global-time driven deformation > stays inside Φ constraints on every film frame 32ms
+ ✓ tests/deformation.test.ts > C002.4 global-time driven deformation > is continuous in time: small Δt ⇒ small displacement 1ms
+ ✓ tests/deformation.test.ts > C002.3 anchors trackable in every test frame > all 900 film frames: anchors finite, Φ(K(s)), invertible, distinct, ordered 90ms
+ ✓ tests/identity.test.ts > Mi identity kernel > is frozen and internally consistent 2ms
+ ✓ tests/identity.test.ts > Mi identity kernel > rejects an inconsistent kernel 0ms
+ ✓ tests/identity.test.ts > Mi identity kernel > core geometry preserves the declared Euler characteristic 43ms
+ ✓ tests/identity.test.ts > Mi identity kernel > satellite field is reproducible from the seed 3ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > default spec is valid 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > is deep-frozen (presentation code cannot mutate identity) 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > serialises canonically and round-trips 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > is versioned: σ = (seed, version) 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > locks the identity fingerprint and graph signature (regression guard) 10ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > fingerprint changes when any identity component changes 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-semver version 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-uint32 seed 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: mirror/other knot T(3,2) 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-coprime knot 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: minor ≥ major radius 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: anchor out of range 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: anchor order broken 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: anchor id swapped 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: graph missing edge 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: graph self loop 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: duplicate phase 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: zero period 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-positive scale bound 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: extra deformation kind 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > declares every invariant with an id 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > C001 view is derived from the V1.0 spec (single source of truth) 0ms
+ ✓ tests/identity.test.ts > C002.3 anchor identity stability > anchors are defined by curve parameter, not vertex index 0ms
+ ✓ tests/identity.test.ts > C002.3 anchor identity stability > anchor positions are identical across repeated evaluation 0ms
+ ✓ tests/identity.test.ts > C002.3 anchor identity stability > anchor world = Φ(K(s)) and labels/order survive deformation 0ms
+ ✓ tests/identity.test.ts > C002 core graph relations > G is the labelled K3 on the three anchors 0ms
+ ✓ tests/identity.test.ts > C002 core graph relations > graph signature is unchanged by deformation, periphery generation and serialisation 41ms
+ ✓ tests/rng.test.ts > seeded rng > produces an identical stream for the same seed 2ms
+ ✓ tests/rng.test.ts > seeded rng > locks the first values of the stream (regression guard) 8ms
+ ✓ tests/rng.test.ts > seeded rng > derives independent sub-streams per label 1ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > is reproducible from the seed 45ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > may vary by variant, while the identity core stays untouched 19ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > nodes keep clearance from the core curve; edges are valid 29ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > time-driven wobble is pure and bounded 9ms
+ ✓ tests/debuggerFixtures.test.ts > debugger fixtures > writes expected anchor states for the browser check 4ms
+ ✓ tests/time.test.ts > frame-driven time > maps frames to seconds at 30 fps 1ms
+ ✓ tests/time.test.ts > frame-driven time > loops exactly over the period, independent of evaluation order 3ms
+
+ Test Files  9 passed (9)
+      Tests  86 passed (86)
+   Start at  16:34:23
+   Duration  1.82s (transform 442ms, setup 0ms, collect 816ms, tests 1.70s, environment 2ms, prepare 670ms)
+
+JSON report written to /home/user/human-ip-os/kunlun/mi-topology-life/out/test-logs/vitest.json
+
