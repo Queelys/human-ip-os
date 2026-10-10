@@ -1,7 +1,7 @@
 # ACCEPTANCE — KUNLUN-MI-C001
 
 卡片：**C001 工程初始化与渲染链路验证**
-验收日期：2026-10-10 · 状态：**PASS（待人工验收）**
+验收日期：2026-10-10 · 状态：**PASS（已通过人工验收）**
 
 ## 验收环境
 
@@ -81,3 +81,10 @@ mp4 全片  eb1c056bd94ef38a…  (首渲 == 重渲)
 2. **开发依赖安全公告**：`npm audit` 报 13 条，全部在开发工具链（vitest 3 / tinypool / @vitest/mocker，typescript-eslint → fast-glob → micromatch → braces）。运行时依赖 `npm audit --omit=dev` 为 0。升级到修复版 vitest 4.1.11 会触发 npm 10.9.4 arborist 崩溃（`Cannot read properties of null (reading 'edgesOut')`），因此 C001 保留 vitest 3.2.7，待后续卡片处理。
 3. **跨机器像素一致性未保证**：软件 WebGL 的哈希只在同一 CPU / Chromium 版本内可比。
 4. **cgroup 内存警告**：Remotion 打印"Detected differing memory amounts"，属容器 cgroup 报告值异常，不影响渲染。
+
+## 人工验收记录
+
+- 2026-10-10：C001 通过人工验收。
+- 确认 (2, 3) 三叶结为弥的核心身份参数（FILM_BIBLE §3）。
+- 确认 SHOT_LIST 中 S01–S05 的正片结构。
+- 视觉语言（FILM_BIBLE §6）仍为【待定】。
