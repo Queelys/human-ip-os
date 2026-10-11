@@ -4,7 +4,7 @@
 
 程序化、确定性、逐帧可重复渲染的科幻动画工程。弥（Mi）不是人形角色，而是由拓扑结构、神经网络与星系式粒子构成的数字生命体。
 
-> 进度：C001 渲染链路（已验收）· C002 MI Identity Kernel V1.0（已验收）· **C003 五幕 30 秒无声视觉母版**（`MI-Film`，成片见 `renders/`）。
+> 进度：C001（已验收）· C002 身份内核（已验收）· C003 五幕视觉母版（已验收）· **C004 声音系统与最终成片**（`renders/masters/mi-final-1080p.mp4`）。
 
 ## 技术栈
 
@@ -41,13 +41,19 @@ npm run preview          # Remotion Studio 浏览器预览（默认 http://local
 | `npm run verify:film` | 渲染冒烟测试：静帧、跨进程确定性、字幕像素与安全区、幕间连续性 |
 | `npm run render:contact-sheet` | 生成五幕分镜联系表 |
 | `npm run acceptance:c003` | 从零执行全部关卡并渲染交付物（需要 `REMOTION_BROWSER_EXECUTABLE`） |
+| `npm run audio:master` | 渲染 5 条 STEM、WAV 母版和 AAC，并测量响度（`renders/audio/`） |
+| `npm run audio:determinism` | 重新渲染整套音频，逐文件比较 SHA-256 |
+| `npm run render:final:picture` | 渲染 `MI-Final` 画面（C003 画面加 C004 时序字幕，无声） |
+| `npm run final:mux` | 画面与 AAC 流复制封装为 `renders/masters/mi-final-1080p.mp4` |
+| `npm run qc:final` | 最终成片自动验收（媒体参数、响度、真峰值、削波、黑场/静音、字幕、声画同步、身份脉冲） |
+| `npm run acceptance:c004` | 从零执行 C001–C004 全部关卡（不重渲、不删除 C003 冻结成片） |
 | `npm run check` | lint + typecheck + test + build |
 | `npm run render:test` | 渲染 `out/c001-render-test.mp4`（3 s / 90 帧） |
 | `npm run verify:video` | ffprobe 核对尺寸、帧率、帧数、时长、编码 |
 | `npm run verify:determinism` | 同一帧在独立进程、不同顺序下重复渲染，比较像素哈希；并整片重渲比较 |
 | `npm run verify:preview` | Playwright 打开 build 与 Studio 预览，检查 WebGL 与控制台错误 |
 
-验收：C001 见 [ACCEPTANCE.md](ACCEPTANCE.md)，C002 见 [docs/C002_ACCEPTANCE.md](docs/C002_ACCEPTANCE.md)，C003 见 [docs/C003_ACCEPTANCE.md](docs/C003_ACCEPTANCE.md)。
+验收：C001 见 [ACCEPTANCE.md](ACCEPTANCE.md)，C002 见 [docs/C002_ACCEPTANCE.md](docs/C002_ACCEPTANCE.md)，C003 见 [docs/C003_ACCEPTANCE.md](docs/C003_ACCEPTANCE.md)，C004 见 [docs/C004_ACCEPTANCE.md](docs/C004_ACCEPTANCE.md)。
 
 ## 目录结构
 
@@ -62,7 +68,9 @@ kunlun/mi-topology-life/
 │   └── evidence/c002/       测试日志、性质测试报告、截图
 ├── debugger/index.html      调试网页入口（vite.debugger.config.ts）
 ├── public/fonts/            字幕字体子集（Noto Serif SC，SIL OFL 1.1）
-├── renders/                 C003 交付物：联系表、540p 预览、1080p 母版
+├── renders/                 C003 交付物：联系表、540p 预览、1080p 视觉母版（冻结）
+│   ├── audio/               C004：STEM、WAV 母版、AAC
+│   └── masters/             C004：最终成片 mi-final-1080p.mp4
 ├── remotion.config.ts       渲染配置（swangle WebGL、png 帧、h264）
 ├── eslint.config.mjs        含确定性守卫规则
 ├── src/
@@ -75,6 +83,8 @@ kunlun/mi-topology-life/
 │   ├── debugger/            调试网页（React + R3F）
 │   ├── film/                C003 纯数值层：timeline、camera、choreography、caption、starfield、visual
 │   ├── scenes/film/         C003 R3F 表现组件（背景、星空、主结、锚点、网络、CameraRig）
+│   ├── audio/               C004 声音引擎：identity（声音身份映射）、control、tracks（五轨）、mix、wav、cli
+│   ├── final/               C004 最终字幕时序
 │   ├── scenes/              表现层：读取内核，按帧号生成画面
 │   └── compositions/        镜头 / 合成层
 ├── tests/                   Vitest
