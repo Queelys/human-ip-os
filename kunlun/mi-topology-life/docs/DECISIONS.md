@@ -67,3 +67,29 @@
 ## D-011 身份曲线的参数化
 
 - K 采用环面结参数化，与 Three.js `TorusKnotGeometry` 的中心线完全一致（a = R/2），使 C001 网格与 C002 内核共享同一条曲线，并由测试锁定。
+
+## D-012 C003 结构：纯数值层 + 表现层
+
+- `src/film/` 只包含帧号的纯函数（时间轴、相机、Φ(t) 参数、包络、`filmStateAt`），不依赖 React 或 Three.js，900 帧可以在 Node 中全量测试。
+- `src/scenes/film/` 与 `src/compositions/MiFilm.tsx` 只负责把状态画出来。
+- 身份数据（spec、锚点、Φ、P）全部直接调用 C002 内核。Φ 参数每帧都由 `deformationFromParams` 校验，超出约束即抛错。C002 身份源码保持不变（集成测试用 git 校验）。
+
+## D-013 显式启用 SwiftShader（浏览器启动包装脚本）
+
+- Chrome 141 对隐式的软件 WebGL 回退给出弃用警告，要求加 `--enable-unsafe-swiftshader`。Remotion 4.0.525 只在 v5 的 `angle` 路径中加这个参数，`swangle` 不会加。
+- C003 渲染通过 `scripts/chrome-swiftshader.sh` 启动真实浏览器并加上这一个参数。渲染后端仍是 SwiftShader，C001 的渲染管线没有改动。
+
+## D-014 渲染日志严格判定与库通知白名单
+
+- `scripts/film-render.mjs` 收集每一条浏览器消息。任何 error 级消息，或包含 WebGL、GL_INVALID、THREE.、swiftshader 的消息，都会让渲染失败。
+- 唯一的白名单是一条**完全匹配**的库通知：`THREE.Clock: This module has been deprecated…`。它来自 @react-three/fiber 9.7.0 在 store 中构造 `THREE.Clock`，与 three 0.186 的组合产生。本工程代码不使用 Clock（lint 禁止）。白名单消息仍会被记录，并以 `LIB-ALLOWED` 输出。升级 R3F 会改变渲染基线，留待单独评估。
+
+## D-015 字幕字体内嵌
+
+- 使用 Noto Serif SC Medium 的子集（Google Fonts `text=` 子集化，TrueType，5.5 KB，SIL OFL 1.1），放在 `public/fonts/`。
+- 用 `FontFace` 加载，`delayRender` 等待；加载失败或字形检查失败时调用 `cancelRender`，不允许回退到系统字体。单元测试解析 cmap，证明 14 个字符全部有字形。
+
+## D-016 ACT V 的"同步"不改动 P 协议
+
+- 卡片要求"三锚点依次脉动并同步"。P 协议固定了相位差 [0, 1/3, 2/3]（INV-P1，C002 已冻结），直接让三个锚点同相会破坏不变量。
+- **依次**由 P 本身给出：A1、A2、A3 分别在约 27.4 s、28.4 s、29.4 s 达到峰值。**同步**由表现层的共享共振包络实现，三个锚点同相，叠加在 P 之上。测试同时验证 P 原值未变、共振对三锚点完全相同。

@@ -6,3 +6,4 @@ test-results/
 *.png
 !docs/**/*.png
 build-debugger/
+!renders/**/*.png

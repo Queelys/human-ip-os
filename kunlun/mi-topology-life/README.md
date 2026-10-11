@@ -4,7 +4,7 @@
 
 程序化、确定性、逐帧可重复渲染的科幻动画工程。弥（Mi）不是人形角色，而是由拓扑结构、神经网络与星系式粒子构成的数字生命体。
 
-> 进度：C001 渲染链路（已验收）· **C002 MI Identity Kernel V1.0**（身份内核 + 调试网页）。正片尚未制作。
+> 进度：C001 渲染链路（已验收）· C002 MI Identity Kernel V1.0（已验收）· **C003 五幕 30 秒无声视觉母版**（`MI-Film`，成片见 `renders/`）。
 
 ## 技术栈
 
@@ -35,13 +35,19 @@ npm run preview          # Remotion Studio 浏览器预览（默认 http://local
 | `npm run test:log` | 完整测试并写入 `out/test-logs/vitest.{txt,json}` |
 | `npm run verify:debugger` | Playwright 驱动调试网页，与 Node 内核逐值比对、检查 Reset/约束/控制台，截图到 `out/debugger/` |
 | `npm run evidence:c002` | 把日志与截图复制到 `docs/evidence/c002/` |
+| `npm run test:integration` | C003 集成测试：身份源码冻结、bundle 合成参数、Studio 预览无错误 |
+| `npm run render:film:preview` / `render:film:master` | 渲染 540p 预览 / 1080p 母版（程序化渲染，任何浏览器错误或 WebGL 消息都会让渲染失败） |
+| `npm run verify:film:video` | ffprobe 核对两个成片（尺寸、帧率、900 帧、30 s、无音轨） |
+| `npm run verify:film` | 渲染冒烟测试：静帧、跨进程确定性、字幕像素与安全区、幕间连续性 |
+| `npm run render:contact-sheet` | 生成五幕分镜联系表 |
+| `npm run acceptance:c003` | 从零执行全部关卡并渲染交付物（需要 `REMOTION_BROWSER_EXECUTABLE`） |
 | `npm run check` | lint + typecheck + test + build |
 | `npm run render:test` | 渲染 `out/c001-render-test.mp4`（3 s / 90 帧） |
 | `npm run verify:video` | ffprobe 核对尺寸、帧率、帧数、时长、编码 |
 | `npm run verify:determinism` | 同一帧在独立进程、不同顺序下重复渲染，比较像素哈希；并整片重渲比较 |
 | `npm run verify:preview` | Playwright 打开 build 与 Studio 预览，检查 WebGL 与控制台错误 |
 
-验收：C001 见 [ACCEPTANCE.md](ACCEPTANCE.md)，C002 见 [docs/C002_ACCEPTANCE.md](docs/C002_ACCEPTANCE.md)。
+验收：C001 见 [ACCEPTANCE.md](ACCEPTANCE.md)，C002 见 [docs/C002_ACCEPTANCE.md](docs/C002_ACCEPTANCE.md)，C003 见 [docs/C003_ACCEPTANCE.md](docs/C003_ACCEPTANCE.md)。
 
 ## 目录结构
 
@@ -55,6 +61,8 @@ kunlun/mi-topology-life/
 │   ├── C002_ACCEPTANCE.md   C002 验收
 │   └── evidence/c002/       测试日志、性质测试报告、截图
 ├── debugger/index.html      调试网页入口（vite.debugger.config.ts）
+├── public/fonts/            字幕字体子集（Noto Serif SC，SIL OFL 1.1）
+├── renders/                 C003 交付物：联系表、540p 预览、1080p 母版
 ├── remotion.config.ts       渲染配置（swangle WebGL、png 帧、h264）
 ├── eslint.config.mjs        含确定性守卫规则
 ├── src/
@@ -65,6 +73,8 @@ kunlun/mi-topology-life/
 │   ├── motion/              deformation（Φ）、pulse（P）
 │   ├── core/                通用工具：rng、time、topology；identity.ts / geometry.ts 为 C001 视图
 │   ├── debugger/            调试网页（React + R3F）
+│   ├── film/                C003 纯数值层：timeline、camera、choreography、caption、starfield、visual
+│   ├── scenes/film/         C003 R3F 表现组件（背景、星空、主结、锚点、网络、CameraRig）
 │   ├── scenes/              表现层：读取内核，按帧号生成画面
 │   └── compositions/        镜头 / 合成层
 ├── tests/                   Vitest

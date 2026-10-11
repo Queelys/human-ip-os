@@ -61,3 +61,30 @@ export const serveStatic = (dir, port) =>
 		});
 		server.listen(port, () => resolve({stop: () => server.close()}));
 	});
+
+/** Decode an image to raw RGBA via ffmpeg. */
+export const decodeRgba = (file) => {
+	const probe = JSON.parse(
+		run('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'json', file]).stdout,
+	);
+	const {width, height} = probe.streams[0];
+	const res = spawnSync('ffmpeg', ['-v', 'error', '-i', file, '-f', 'rawvideo', '-pix_fmt', 'rgba', '-'], {maxBuffer: 1 << 30});
+	if (res.status !== 0) throw new Error(`decode failed: ${file}`);
+	return {width, height, data: res.stdout};
+};
+
+/** Rec. 709 luma of an RGBA pixel buffer, averaged (0–255). */
+export const meanLuma = ({data}) => {
+	let s = 0;
+	for (let i = 0; i < data.length; i += 4) s += 0.2126 * data[i] + 0.7152 * data[i + 1] + 0.0722 * data[i + 2];
+	return s / (data.length / 4);
+};
+
+/** Mean absolute per-channel difference (0–255) between two equal-size images. */
+export const meanAbsDiff = (a, b) => {
+	let s = 0;
+	for (let i = 0; i < a.data.length; i += 4) {
+		s += Math.abs(a.data[i] - b.data[i]) + Math.abs(a.data[i + 1] - b.data[i + 1]) + Math.abs(a.data[i + 2] - b.data[i + 2]);
+	}
+	return s / ((a.data.length / 4) * 3);
+};

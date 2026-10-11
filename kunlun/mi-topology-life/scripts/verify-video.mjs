@@ -13,9 +13,12 @@ const {positionals, values} = parseArgs({
 		fps: {type: 'string'},
 		frames: {type: 'string'},
 		duration: {type: 'string'},
+		'no-audio': {type: 'boolean', default: false},
 	},
 });
 const file = positionals[0];
+const requireNoAudio = values['no-audio'];
+delete values['no-audio'];
 const want = Object.fromEntries(Object.entries(values).map(([k, v]) => [k, Number(v)]));
 
 const probe = JSON.parse(
@@ -50,4 +53,9 @@ const ok = report([
 	['codec', s.codec_name === 'h264', s.codec_name],
 	['pix_fmt', s.pix_fmt === 'yuv420p', s.pix_fmt],
 ]);
-process.exit(ok ? 0 : 1);
+let audioOk = true;
+if (requireNoAudio) {
+	const audio = JSON.parse(run('ffprobe', ['-v', 'error', '-select_streams', 'a', '-show_entries', 'stream=index', '-of', 'json', file]).stdout);
+	audioOk = report([['no audio stream (silent master)', (audio.streams ?? []).length === 0, `${(audio.streams ?? []).length} audio streams`]]);
+}
+process.exit(ok && audioOk ? 0 : 1);

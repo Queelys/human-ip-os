@@ -21,7 +21,14 @@
     "debug": "vite --config vite.debugger.config.ts",
     "test:log": "node scripts/test-log.mjs",
     "verify:debugger": "node scripts/verify-debugger.mjs",
-    "evidence:c002": "node scripts/collect-evidence.mjs"
+    "evidence:c002": "node scripts/collect-evidence.mjs",
+    "test:integration": "node scripts/test-integration.mjs",
+    "render:film:preview": "node scripts/film-render.mjs video --out renders/mi-preview-540p.mp4 --scale 0.5 --tag render-preview-540p",
+    "render:film:master": "node scripts/film-render.mjs video --out renders/mi-visual-master-1080p.mp4 --tag render-master-1080p",
+    "verify:film": "node scripts/verify-film.mjs",
+    "verify:film:video": "node scripts/verify-video.mjs renders/mi-visual-master-1080p.mp4 --width 1920 --height 1080 --fps 30 --frames 900 --duration 30 --no-audio && node scripts/verify-video.mjs renders/mi-preview-540p.mp4 --width 960 --height 540 --fps 30 --frames 900 --duration 30 --no-audio",
+    "render:contact-sheet": "node scripts/contact-sheet.mjs",
+    "acceptance:c003": "bash scripts/acceptance-c003.sh"
   },
   "dependencies": {
     "@react-three/fiber": "9.7.0",
@@ -35,6 +42,7 @@
   "devDependencies": {
     "@eslint/js": "9.39.4",
     "@remotion/eslint-config-flat": "4.0.525",
+    "@remotion/renderer": "4.0.525",
     "@types/node": "22.20.5",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.7",
