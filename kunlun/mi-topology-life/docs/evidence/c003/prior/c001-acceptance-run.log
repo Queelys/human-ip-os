@@ -1,0 +1,114 @@
+===== npm run lint
+
+> kunlun-mi-topology-life@0.1.0 lint
+> eslint src tests scripts
+
+===== npm run typecheck
+
+> kunlun-mi-topology-life@0.1.0 typecheck
+> tsc --noEmit
+
+===== npm test
+
+> kunlun-mi-topology-life@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /home/user/human-ip-os/kunlun/mi-topology-life
+
+ ✓ tests/time.test.ts (2 tests) 3ms
+ ✓ tests/rng.test.ts (3 tests) 12ms
+ ✓ tests/identity.test.ts (4 tests) 58ms
+
+ Test Files  3 passed (3)
+      Tests  9 passed (9)
+   Start at  13:37:28
+   Duration  511ms (transform 216ms, setup 0ms, collect 304ms, tests 73ms, environment 0ms, prepare 236ms)
+
+===== npm run build
+
+> kunlun-mi-topology-life@0.1.0 build
+> remotion bundle src/index.ts --out-dir build
+
+Bundling 6%
+Bundling 21%
+Bundling 32%
+Bundling 43%
+Bundling 54%
+Bundling 65%
+Bundling 70%
+Bundling 75%
+Bundling 80%
+Bundling 85%
+Bundling 91%
+Bundling 98%
+⚡️ Cached bundle. Subsequent renders will be faster.
++ /home/user/human-ip-os/kunlun/mi-topology-life/build
+===== npm run render:test -- --log=error
+
+> kunlun-mi-topology-life@0.1.0 render:test
+> remotion render src/index.ts C001-RenderTest out/c001-render-test.mp4 --log=error
+
+===== npm run verify:video
+
+> kunlun-mi-topology-life@0.1.0 verify:video
+> node scripts/verify-video.mjs out/c001-render-test.mp4 --width 1920 --height 1080 --fps 30 --frames 90 --duration 3
+
+ffprobe out/c001-render-test.mp4
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "duration": "3.000000",
+      "nb_frames": "90",
+      "nb_read_frames": "90"
+    }
+  ],
+  "format": {
+    "duration": "3.000000"
+  }
+}
+PASS  width                              1920 (want 1920)
+PASS  height                             1080 (want 1080)
+PASS  r_frame_rate                       30/1 (want 30)
+PASS  avg_frame_rate                     30/1 (want 30)
+PASS  nb_read_frames (decoded)           90 (want 90)
+PASS  nb_frames (container)              90 (want 90)
+PASS  stream duration                    3.000000s (want 3s)
+PASS  format duration                    3.000000s (want 3s ± half frame)
+PASS  codec                              h264
+PASS  pix_fmt                            yuv420p
+===== npm run verify:determinism
+
+> kunlun-mi-topology-life@0.1.0 verify:determinism
+> node scripts/verify-determinism.mjs
+
+rendered frame 0 pass A: 0717ef3d7ea85a63459fdb425b0790f2f4997fa3300892f47dd82222dbea41c5
+rendered frame 45 pass A: 9cd03bb486b33e8b164b69979f286a055fa243310c4451ad21c274d025c3b02e
+rendered frame 89 pass A: 9844b3bb087798611355fe639b3abc17b81948ddc699654383676b35db1faffb
+rendered frame 89 pass B: 9844b3bb087798611355fe639b3abc17b81948ddc699654383676b35db1faffb
+rendered frame 45 pass B: 9cd03bb486b33e8b164b69979f286a055fa243310c4451ad21c274d025c3b02e
+rendered frame 0 pass B: 0717ef3d7ea85a63459fdb425b0790f2f4997fa3300892f47dd82222dbea41c5
+PASS  frame 0: pass A == pass B          0717ef3d7ea85a63
+PASS  frame 45: pass A == pass B         9cd03bb486b33e8b
+PASS  frame 89: pass A == pass B         9844b3bb08779861
+PASS  frames differ (motion present)     0 ≠ 45 ≠ 89
+PASS  mp4 re-render: all 90 frames equal eb1c056bd94ef38a vs eb1c056bd94ef38a
+===== npm run verify:preview
+
+> kunlun-mi-topology-life@0.1.0 verify:preview
+> node scripts/verify-preview.mjs
+
+ENV-ALLOWED [studio] blocked outbound request: https://bugs.remotion.dev/api/4.0.525
+PASS  [build] page loads                 http://localhost:3125/C001-RenderTest
+PASS  [build] WebGL canvas mounted       1920×1080
+PASS  [build] no console/page errors     0 errors (0 env-allowed)
+PASS  [studio] page loads                http://localhost:3123/C001-RenderTest
+PASS  [studio] WebGL canvas mounted      1920×1080
+PASS  [studio] no console/page errors    0 errors (1 env-allowed)

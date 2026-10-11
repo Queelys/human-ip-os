@@ -1,0 +1,462 @@
+===== npm install (12:38:23)
+npm warn deprecated eslint@9.39.4: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 420 packages, and audited 421 packages in 13s
+
+101 packages are looking for funding
+  run `npm fund` for details
+
+13 vulnerabilities (1 moderate, 10 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+EXIT 0 :: npm install
+===== npm run lint (12:38:37)
+
+> kunlun-mi-topology-life@0.1.0 lint
+> eslint src tests scripts
+
+EXIT 0 :: npm run lint
+===== npm run typecheck (12:38:39)
+
+> kunlun-mi-topology-life@0.1.0 typecheck
+> tsc --noEmit
+
+EXIT 0 :: npm run typecheck
+===== npm run test:log (12:38:42)
+
+> kunlun-mi-topology-life@0.1.0 test:log
+> node scripts/test-log.mjs
+
+
+ RUN  v3.2.7 /home/user/human-ip-os/kunlun/mi-topology-life
+
+ ✓ tests/identity.test.ts > Mi identity kernel > is frozen and internally consistent 2ms
+ ✓ tests/identity.test.ts > Mi identity kernel > rejects an inconsistent kernel 0ms
+ ✓ tests/identity.test.ts > Mi identity kernel > core geometry preserves the declared Euler characteristic 42ms
+ ✓ tests/identity.test.ts > Mi identity kernel > satellite field is reproducible from the seed 3ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > default spec is valid 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > is deep-frozen (presentation code cannot mutate identity) 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > serialises canonically and round-trips 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > is versioned: σ = (seed, version) 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > locks the identity fingerprint and graph signature (regression guard) 13ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > fingerprint changes when any identity component changes 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-semver version 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-uint32 seed 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: mirror/other knot T(3,2) 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-coprime knot 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: minor ≥ major radius 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: anchor out of range 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: anchor order broken 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: anchor id swapped 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: graph missing edge 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: graph self loop 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: duplicate phase 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: zero period 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-positive scale bound 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: extra deformation kind 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > declares every invariant with an id 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > C001 view is derived from the V1.0 spec (single source of truth) 0ms
+ ✓ tests/identity.test.ts > C002.3 anchor identity stability > anchors are defined by curve parameter, not vertex index 0ms
+ ✓ tests/identity.test.ts > C002.3 anchor identity stability > anchor positions are identical across repeated evaluation 0ms
+ ✓ tests/identity.test.ts > C002.3 anchor identity stability > anchor world = Φ(K(s)) and labels/order survive deformation 1ms
+ ✓ tests/identity.test.ts > C002 core graph relations > G is the labelled K3 on the three anchors 0ms
+ ✓ tests/identity.test.ts > C002 core graph relations > graph signature is unchanged by deformation, periphery generation and serialisation 18ms
+ ✓ tests/property.test.ts > C002.8 property tests > legal-params: sampled Φ params validate and have scale > 0 25ms
+ ✓ tests/property.test.ts > C002.8 property tests > inverse-identity: Φ⁻¹∘Φ ≈ id and Φ∘Φ⁻¹ ≈ id for legal params 183ms
+ ✓ tests/property.test.ts > C002.8 property tests > inverse-identity-compositions: random chains of 1–8 primitives 32ms
+ ✓ tests/property.test.ts > C002.8 property tests > orientation: Jacobian det > 0 for legal Φ (chirality preserved) 16ms
+ ✓ tests/property.test.ts > C002.8 property tests > anchor-recovery: Φ⁻¹(anchor world) = K(s) for legal Φ 27ms
+ ✓ tests/property.test.ts > C002.8 property tests > motion-time: any global time gives legal params with scale > 0 39ms
+ ✓ tests/film/identity.film.test.ts > C003.8 identity kernel is used, not copied or modified > film uses the C002 spec object itself, unchanged 2ms
+ ✓ tests/film/identity.film.test.ts > C003.8 identity kernel is used, not copied or modified > computing the whole film leaves the spec byte-identical 184ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > SO(3) rotation: orthonormal columns, det = +1, inverse exact 9ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > rotation by π about z matches closed form 0ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > positive uniform scale: inverse exact, non-positive rejected 4ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > z-twist: preserves z and distance to the z axis, inverse exact 4ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > compositions: inverse is reverse-order composition of inverses 4ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > every allowed Φ is orientation-preserving (Jacobian det > 0, so no mirror trefoil) 5ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > forbidden primitives are rejected at runtime 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > defaults are the identity map 1ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { scale: +0 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { scale: -1 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { scale: 3.01 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { twist: 2 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { yaw: NaN } 0ms
+ ✓ tests/deformation.test.ts > C002.4 global-time driven deformation > is a pure function of time (order independent, repeatable) 1ms
+ ✓ tests/deformation.test.ts > C002.4 global-time driven deformation > stays inside Φ constraints on every film frame 27ms
+ ✓ tests/deformation.test.ts > C002.4 global-time driven deformation > is continuous in time: small Δt ⇒ small displacement 1ms
+ ✓ tests/deformation.test.ts > C002.3 anchors trackable in every test frame > all 900 film frames: anchors finite, Φ(K(s)), invertible, distinct, ordered 108ms
+ ✓ tests/property.test.ts > C002.8 property tests > pulse-phase: phase differences equal the spec offsets at any time 14ms
+ ✓ tests/property.test.ts > C002.8 property tests > knot-geometry: legal radii give a closed, regular, non-degenerate sampled curve 353ms
+ ✓ tests/property.test.ts > C002.8 property tests > harness: failures are recorded with seeds and reproduce exactly via MI_PROPERTY_SEED 1ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > is closed: |K(1) − K(0)| ≈ 0 1ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > tangent is continuous across the seam: K′(1) = K′(0), K″(1) = K″(0) 0ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > is 1-periodic for arbitrary parameters 1ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > analytic first/second derivatives match finite differences 3ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > is regular: min |K′| ≥ closed-form bound > 0 28ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=64 is non-degenerate 1ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=256 is non-degenerate 3ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=512 is non-degenerate 8ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=1024 is non-degenerate 44ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > records the strand separation of K (numerical, not a proof) 21ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > visual envelopes never jump (all frames) 10ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > Φ pose parameters never jump (all frames) 93ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > rejects degenerate sample counts 1ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > total curvature exceeds 4π (Fáry–Milnor necessary condition for a knot) 12ms
+ ✓ tests/trefoil.test.ts > C002.2 diagram check (numerical) > xy-projection has exactly 3 crossings of equal sign (trefoil diagram, fixed chirality) 106ms
+ ✓ tests/trefoil.test.ts > C001 ↔ C002 consistency > C001 mesh centre line is exactly K 13ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > anchor positions move continuously, including across act boundaries 181ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > at each boundary the step equals the local trend (no discontinuity) 1ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > caption: absent before 28 s, fades in from frame 840, fully visible from 864 to the end 17ms
+ ✓ tests/film/caption.test.ts > C003.6 caption > text is exactly the required line 1ms
+ ✓ tests/film/caption.test.ts > C003.6 caption > embedded font covers every caption code point 1ms
+ ✓ tests/film/caption.test.ts > C003.6 caption > font licence ships with the font 0ms
+ ✓ tests/film/caption.test.ts > C003.6 caption > typographic block fits the title-safe area (upper bound on advance width) 0ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > is a pure function of the frame (repeatable, order independent) 2ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > produces finite values on every frame 17ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > ACT I camera is fixed 4ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > ACT II pushes in, ACT IV pulls back, ACT V ends frontal 4ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > ACT III orbit is small-angle (< 30°) 0ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > has no jumps: per-frame steps and accelerations are bounded everywhere 4ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > is at rest (zero velocity) at every act boundary 0ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > is reproducible from the seed 37ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > may vary by variant, while the identity core stays untouched 16ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > nodes keep clearance from the core curve; edges are valid 24ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > time-driven wobble is pure and bounded 7ms
+ ✓ tests/debuggerFixtures.test.ts > debugger fixtures > writes expected anchor states for the browser check 4ms
+ ✓ tests/film/identity.film.test.ts > C003.8 anchors exist and keep identity on every frame > three anchors A1–A3 with their spec parameters, positioned at Φ(K(s)) 14ms
+ ✓ tests/film/identity.film.test.ts > C003.8 anchors exist and keep identity on every frame > pulse values are the unmodified P protocol 35ms
+ ✓ tests/film/identity.film.test.ts > C003.8 anchors exist and keep identity on every frame > ACT V: P gives the sequence A1 → A2 → A3 at 27 s, 28 s, 29 s; resonance is shared 2ms
+ ✓ tests/film/identity.film.test.ts > C003.8 main knot obeys the C002 deformation constraints > every frame: Φ params inside the spec bounds; only allowed primitives 37ms
+ ✓ tests/film/identity.film.test.ts > C003.8 main knot obeys the C002 deformation constraints > Φ is the identity in ACT I and at the final frame 2ms
+ ✓ tests/film/identity.film.test.ts > C003.8 main knot obeys the C002 deformation constraints > every frame: orientation preserved, exactly invertible, closed curve, tube thinner than 0.3 × separation 1600ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > phase differences between anchors are fixed on every film frame 47ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > is shift-equivariant: I_Ai(t) = I_A1(t − offset_i·T) 33ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > is periodic, bounded in [0, 1] and peaks at 1 281ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > depends only on t — evaluation order does not matter 1ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > default config: pulses never overlap (width ≤ smallest phase gap) 9ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > total frame count is exactly 900 (30 s × 30 fps) 1ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > acts match the shot plan exactly 1ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > every frame belongs to exactly one act (no gaps, no overlaps) 59ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > validator detects gaps, overlaps and short coverage 0ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > transition table: one per boundary, all continuous (no hard cuts) 0ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > representative frames lie inside their acts 0ms
+ ✓ tests/film/plan.fixture.test.ts > writes out/test-logs/film-plan.json 7ms
+ ✓ tests/film/identity.film.test.ts > C003.8 main knot obeys the C002 deformation constraints > arc reveal is a monotone draw mask that ends tiling K exactly 83ms
+ ✓ tests/film/identity.film.test.ts > C003.8 no NaN / Infinity / invalid geometry > every number in every frame state is finite 342ms
+ ✓ tests/film/identity.film.test.ts > C003.8 no NaN / Infinity / invalid geometry > no degenerate geometry: alphas/intensities in [0, 1], arc lengths ≥ 0 36ms
+ ✓ tests/rng.test.ts > seeded rng > produces an identical stream for the same seed 2ms
+ ✓ tests/rng.test.ts > seeded rng > locks the first values of the stream (regression guard) 7ms
+ ✓ tests/rng.test.ts > seeded rng > derives independent sub-streams per label 0ms
+ ✓ tests/time.test.ts > frame-driven time > maps frames to seconds at 30 fps 2ms
+ ✓ tests/time.test.ts > frame-driven time > loops exactly over the period, independent of evaluation order 1ms
+
+ Test Files  15 passed (15)
+      Tests  120 passed (120)
+   Start at  12:38:43
+   Duration  3.50s (transform 574ms, setup 0ms, collect 1.55s, tests 4.44s, environment 3ms, prepare 1.14s)
+
+JSON report written to /home/user/human-ip-os/kunlun/mi-topology-life/out/test-logs/vitest.json
+
+EXIT 0 :: npm run test:log
+===== npm run build (12:38:47)
+
+> kunlun-mi-topology-life@0.1.0 build
+> remotion bundle src/index.ts --out-dir build && vite build --config vite.debugger.config.ts
+
+Bundling 6%
+Bundling 21%
+Bundling 32%
+Bundling 43%
+Bundling 54%
+Bundling 65%
+Bundling 71%
+Bundling 76%
+Bundling 81%
+Bundling 87%
+Bundling 92%
+Bundling 98%
+⚡️ Cached bundle. Subsequent renders will be faster.
++ /home/user/human-ip-os/kunlun/mi-topology-life/build
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 60 modules transformed.
+rendering chunks...
+computing gzip size...
+../build-debugger/index.html                    0.56 kB │ gzip:   0.41 kB
+../build-debugger/assets/index-EHUcqRyk.js  1,139.73 kB │ gzip: 315.58 kB
+✓ built in 3.08s
+EXIT 0 :: npm run build
+===== npm run test:integration (12:39:03)
+
+> kunlun-mi-topology-life@0.1.0 test:integration
+> node scripts/test-integration.mjs
+
+PASS  identity sources unchanged since C002 acceptance clean vs 4ec5e9f
+PASS  bundle: MI-Film 1920×1080 @30fps 900 frames {"width":1920,"height":1080,"fps":30,"durationInFrames":900}
+PASS  bundle: C001-RenderTest unchanged (90 frames) {"width":1920,"height":1080,"fps":30,"durationInFrames":90}
+PASS  studio preview: MI-Film WebGL canvas 1920×1080
+PASS  studio preview: no errors / WebGL warnings 0 (1 messages total)
+EXIT 0 :: npm run test:integration
+===== npm run render:test -- --log=error (12:39:18)
+
+> kunlun-mi-topology-life@0.1.0 render:test
+> remotion render src/index.ts C001-RenderTest out/c001-render-test.mp4 --log=error
+
+EXIT 0 :: npm run render:test -- --log=error
+===== npm run verify:video (12:39:43)
+
+> kunlun-mi-topology-life@0.1.0 verify:video
+> node scripts/verify-video.mjs out/c001-render-test.mp4 --width 1920 --height 1080 --fps 30 --frames 90 --duration 3
+
+ffprobe out/c001-render-test.mp4
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "duration": "3.000000",
+      "nb_frames": "90",
+      "nb_read_frames": "90"
+    }
+  ],
+  "format": {
+    "duration": "3.000000"
+  }
+}
+PASS  width                              1920 (want 1920)
+PASS  height                             1080 (want 1080)
+PASS  r_frame_rate                       30/1 (want 30)
+PASS  avg_frame_rate                     30/1 (want 30)
+PASS  nb_read_frames (decoded)           90 (want 90)
+PASS  nb_frames (container)              90 (want 90)
+PASS  stream duration                    3.000000s (want 3s)
+PASS  format duration                    3.000000s (want 3s ± half frame)
+PASS  codec                              h264
+PASS  pix_fmt                            yuv420p
+EXIT 0 :: npm run verify:video
+===== npm run verify:determinism (12:39:44)
+
+> kunlun-mi-topology-life@0.1.0 verify:determinism
+> node scripts/verify-determinism.mjs
+
+rendered frame 0 pass A: 0717ef3d7ea85a63459fdb425b0790f2f4997fa3300892f47dd82222dbea41c5
+rendered frame 45 pass A: 9cd03bb486b33e8b164b69979f286a055fa243310c4451ad21c274d025c3b02e
+rendered frame 89 pass A: 9844b3bb087798611355fe639b3abc17b81948ddc699654383676b35db1faffb
+rendered frame 89 pass B: 9844b3bb087798611355fe639b3abc17b81948ddc699654383676b35db1faffb
+rendered frame 45 pass B: 9cd03bb486b33e8b164b69979f286a055fa243310c4451ad21c274d025c3b02e
+rendered frame 0 pass B: 0717ef3d7ea85a63459fdb425b0790f2f4997fa3300892f47dd82222dbea41c5
+PASS  frame 0: pass A == pass B          0717ef3d7ea85a63
+PASS  frame 45: pass A == pass B         9cd03bb486b33e8b
+PASS  frame 89: pass A == pass B         9844b3bb08779861
+PASS  frames differ (motion present)     0 ≠ 45 ≠ 89
+PASS  mp4 re-render: all 90 frames equal eb1c056bd94ef38a vs eb1c056bd94ef38a
+EXIT 0 :: npm run verify:determinism
+===== npm run verify:preview (12:40:43)
+
+> kunlun-mi-topology-life@0.1.0 verify:preview
+> node scripts/verify-preview.mjs
+
+ENV-ALLOWED [studio] blocked outbound request: https://bugs.remotion.dev/api/4.0.525
+PASS  [build] page loads                 http://localhost:3125/C001-RenderTest
+PASS  [build] WebGL canvas mounted       1920×1080
+PASS  [build] no console/page errors     0 errors (0 env-allowed)
+PASS  [studio] page loads                http://localhost:3123/C001-RenderTest
+PASS  [studio] WebGL canvas mounted      1920×1080
+PASS  [studio] no console/page errors    0 errors (1 env-allowed)
+EXIT 0 :: npm run verify:preview
+===== npm run verify:debugger (12:41:09)
+
+> kunlun-mi-topology-life@0.1.0 verify:debugger
+> node scripts/verify-debugger.mjs
+
+PASS  page loads + WebGL canvas          width 1137
+PASS  shows identity version             1.0.0
+PASS  shows seed                         0x4B4C4D49
+PASS  shows fingerprint                  cd2e236379d37be5
+PASS  case default: anchors = kernel     frame 0, max|Δ| 2.2e-16, inv 0.0e+0, pulseΔ 0.0e+0
+PASS  case manual: anchors = kernel      frame 123, max|Δ| 4.4e-16, inv 5.6e-16, pulseΔ 0.0e+0
+PASS  case motion-f150: anchors = kernel frame 150, max|Δ| 2.2e-16, inv 1.8e-15, pulseΔ 0.0e+0
+PASS  case motion-f450: anchors = kernel frame 450, max|Δ| 2.2e-16, inv 2.3e-16, pulseΔ 0.0e+0
+PASS  case motion-f899: anchors = kernel frame 899, max|Δ| 2.2e-16, inv 4.4e-16, pulseΔ 0.0e+0
+PASS  scale=5 flagged outside Φ          paramsValid=false
+PASS  reset restores defaults            {"frame":0,"followMotion":false,"params":{"yaw":0,"pitch":0,"roll":0,"scale":1,"twist":0}}
+PASS  no console/page errors             0 errors
+screenshots: out/debugger/*.png
+EXIT 0 :: npm run verify:debugger
+===== npm run render:film:preview (12:41:22)
+
+> kunlun-mi-topology-life@0.1.0 render:film:preview
+> node scripts/film-render.mjs video --out renders/mi-preview-540p.mp4 --scale 0.5 --tag render-preview-540p
+
+composition {"id":"MI-Film","width":1920,"height":1080,"fps":30,"durationInFrames":900}
+render renders/mi-preview-540p.mp4: 0% (1 s)
+[Tab 2, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 1, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+render renders/mi-preview-540p.mp4: 10% (11 s)
+render renders/mi-preview-540p.mp4: 20% (17 s)
+render renders/mi-preview-540p.mp4: 30% (26 s)
+render renders/mi-preview-540p.mp4: 40% (37 s)
+render renders/mi-preview-540p.mp4: 50% (50 s)
+render renders/mi-preview-540p.mp4: 60% (63 s)
+render renders/mi-preview-540p.mp4: 70% (77 s)
+render renders/mi-preview-540p.mp4: 80% (91 s)
+render renders/mi-preview-540p.mp4: 90% (104 s)
+render renders/mi-preview-540p.mp4: 100% (108 s)
+log: out/logs/render-preview-540p.json
+LIB-ALLOWED (3×): THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+browser messages: 3, error/WebGL messages: 0
+EXIT 0 :: npm run render:film:preview
+===== npm run render:film:master (12:43:11)
+
+> kunlun-mi-topology-life@0.1.0 render:film:master
+> node scripts/film-render.mjs video --out renders/mi-visual-master-1080p.mp4 --tag render-master-1080p
+
+composition {"id":"MI-Film","width":1920,"height":1080,"fps":30,"durationInFrames":900}
+render renders/mi-visual-master-1080p.mp4: 0% (1 s)
+[Tab 1, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 2, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+render renders/mi-visual-master-1080p.mp4: 10% (12 s)
+render renders/mi-visual-master-1080p.mp4: 20% (20 s)
+render renders/mi-visual-master-1080p.mp4: 30% (32 s)
+render renders/mi-visual-master-1080p.mp4: 40% (45 s)
+render renders/mi-visual-master-1080p.mp4: 50% (63 s)
+render renders/mi-visual-master-1080p.mp4: 60% (80 s)
+render renders/mi-visual-master-1080p.mp4: 70% (98 s)
+render renders/mi-visual-master-1080p.mp4: 80% (114 s)
+render renders/mi-visual-master-1080p.mp4: 90% (131 s)
+render renders/mi-visual-master-1080p.mp4: 100% (136 s)
+log: out/logs/render-master-1080p.json
+LIB-ALLOWED (3×): THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+browser messages: 3, error/WebGL messages: 0
+EXIT 0 :: npm run render:film:master
+===== npm run verify:film:video (12:45:27)
+
+> kunlun-mi-topology-life@0.1.0 verify:film:video
+> node scripts/verify-video.mjs renders/mi-visual-master-1080p.mp4 --width 1920 --height 1080 --fps 30 --frames 900 --duration 30 --no-audio && node scripts/verify-video.mjs renders/mi-preview-540p.mp4 --width 960 --height 540 --fps 30 --frames 900 --duration 30 --no-audio
+
+ffprobe renders/mi-visual-master-1080p.mp4
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "duration": "30.000000",
+      "nb_frames": "900",
+      "nb_read_frames": "900"
+    }
+  ],
+  "format": {
+    "duration": "30.000000"
+  }
+}
+PASS  width                              1920 (want 1920)
+PASS  height                             1080 (want 1080)
+PASS  r_frame_rate                       30/1 (want 30)
+PASS  avg_frame_rate                     30/1 (want 30)
+PASS  nb_read_frames (decoded)           900 (want 900)
+PASS  nb_frames (container)              900 (want 900)
+PASS  stream duration                    30.000000s (want 30s)
+PASS  format duration                    30.000000s (want 30s ± half frame)
+PASS  codec                              h264
+PASS  pix_fmt                            yuv420p
+PASS  no audio stream (silent master)    0 audio streams
+ffprobe renders/mi-preview-540p.mp4
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 960,
+      "height": 540,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "duration": "30.000000",
+      "nb_frames": "900",
+      "nb_read_frames": "900"
+    }
+  ],
+  "format": {
+    "duration": "30.000000"
+  }
+}
+PASS  width                              960 (want 960)
+PASS  height                             540 (want 540)
+PASS  r_frame_rate                       30/1 (want 30)
+PASS  avg_frame_rate                     30/1 (want 30)
+PASS  nb_read_frames (decoded)           900 (want 900)
+PASS  nb_frames (container)              900 (want 900)
+PASS  stream duration                    30.000000s (want 30s)
+PASS  format duration                    30.000000s (want 30s ± half frame)
+PASS  codec                              h264
+PASS  pix_fmt                            yuv420p
+PASS  no audio stream (silent master)    0 audio streams
+EXIT 0 :: npm run verify:film:video
+===== npm run verify:film (12:45:34)
+
+> kunlun-mi-topology-life@0.1.0 verify:film
+> node scripts/verify-film.mjs
+
+PASS  stills rendered (no error/WebGL logs) 26 frames, bad logs 0
+PASS  composition 1920×1080 @30fps, 900 frames {"id":"MI-Film","width":1920,"height":1080,"fps":30,"durationInFrames":900}
+PASS  determinism f899 (separate process, reversed) a9b574009e87f155
+PASS  determinism f885 (separate process, reversed) 9f39820d17733b7c
+PASS  determinism f690 (separate process, reversed) 3e70d785a504d09f
+PASS  determinism f480 (separate process, reversed) 0c99d4d56623ca43
+PASS  determinism f300 (separate process, reversed) 96c0fc1281014a5b
+PASS  determinism f150 (separate process, reversed) dfed8bd24687a870
+PASS  determinism f149 (separate process, reversed) 147c5f46bab583de
+PASS  determinism f101 (separate process, reversed) d754995c595abf79
+PASS  second render process clean        bad logs 0
+PASS  caption absent at f830             0 px differ
+PASS  caption absent at f840             0 px differ
+PASS  caption visible + in title-safe at f846 9410 px, bbox x538–1347 y869–925
+PASS  caption visible + in title-safe at f885 31839 px, bbox x535–1353 y864–925
+PASS  caption visible + in title-safe at f899 31839 px, bbox x535–1353 y864–925
+PASS  transition I→II @150 continuous    Δ before 0.000, across 0.000, after 0.000
+PASS  transition II→III @330 continuous  Δ before 0.249, across 0.252, after 0.270
+PASS  transition III→IV @540 continuous  Δ before 1.762, across 1.745, after 1.795
+PASS  transition IV→V @750 continuous    Δ before 2.150, across 2.155, after 2.179
+EXIT 0 :: npm run verify:film
+===== npm run render:contact-sheet (12:46:25)
+
+> kunlun-mi-topology-life@0.1.0 render:contact-sheet
+> node scripts/contact-sheet.mjs
+
+renders/mi-storyboard-contact-sheet.png (15 frames, 1920×1800)
+EXIT 0 :: npm run render:contact-sheet
+===== node scripts/collect-evidence-c003.mjs (12:46:26)
+out/test-logs/vitest.txt → docs/evidence/c003/vitest.txt
+out/test-logs/vitest.json → docs/evidence/c003/vitest.json
+out/test-logs/camera-continuity.json → docs/evidence/c003/camera-continuity.json
+out/test-logs/envelope-continuity.json → docs/evidence/c003/envelope-continuity.json
+out/test-logs/film-geometry.json → docs/evidence/c003/film-geometry.json
+out/test-logs/film-plan.json → docs/evidence/c003/film-plan.json
+out/logs/integration.json → docs/evidence/c003/integration.json
+out/logs/integration-studio-mi-film.png → docs/evidence/c003/integration-studio-mi-film.png
+out/logs/verify-film.json → docs/evidence/c003/verify-film.json
+render logs copied
+EXIT 0 :: node scripts/collect-evidence-c003.mjs
+ACCEPTANCE PASS
