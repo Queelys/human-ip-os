@@ -1,0 +1,73 @@
+{
+  "rows": [
+    [
+      "identity sources unchanged since C002 acceptance",
+      true,
+      "clean vs 4ec5e9f"
+    ],
+    [
+      "bundle: MI-Film 1920×1080 @30fps 900 frames",
+      true,
+      "{\"width\":1920,\"height\":1080,\"fps\":30,\"durationInFrames\":900}"
+    ],
+    [
+      "bundle: C001-RenderTest unchanged (90 frames)",
+      true,
+      "{\"width\":1920,\"height\":1080,\"fps\":30,\"durationInFrames\":90}"
+    ],
+    [
+      "studio preview: MI-Film WebGL canvas",
+      true,
+      "1920×1080"
+    ],
+    [
+      "studio preview: no errors / WebGL warnings",
+      true,
+      "0 (1 messages total)"
+    ]
+  ],
+  "details": {
+    "identityFreeze": {
+      "commit": "4ec5e9f",
+      "paths": [
+        "src/identity",
+        "src/motion",
+        "src/geometry/trefoil.ts",
+        "src/geometry/neuralGraph.ts",
+        "src/geometry/vec3.ts",
+        "src/core/rng.ts",
+        "src/core/identity.ts"
+      ],
+      "diff": "",
+      "status": ""
+    },
+    "compositions": {
+      "C001-RenderTest": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "durationInFrames": 90
+      },
+      "MI-Film": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "durationInFrames": 900
+      }
+    },
+    "studio": {
+      "canvas": {
+        "w": 1920,
+        "h": 1080,
+        "webgl": true
+      },
+      "messages": [
+        {
+          "type": "warning",
+          "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+        }
+      ],
+      "bad": []
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "frames": 900,
+  "minStrandSeparation": 0.6220811531242247,
+  "coreTubeRadius": 0.035,
+  "separationOverRadius": 17.773747232120705,
+  "maxInverseError": 1.2412670766236366e-15
+}

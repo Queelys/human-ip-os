@@ -1,0 +1,102 @@
+{
+  "film": {
+    "title": "弥：拓扑生命",
+    "titleEn": "Mi: Topological Life",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInSeconds": 30,
+    "durationInFrames": 900
+  },
+  "acts": [
+    {
+      "id": "I",
+      "name": "未分",
+      "nameEn": "Undivided",
+      "start": 0,
+      "end": 149,
+      "representative": 101
+    },
+    {
+      "id": "II",
+      "name": "破缺",
+      "nameEn": "Symmetry Breaking",
+      "start": 150,
+      "end": 329,
+      "representative": 300
+    },
+    {
+      "id": "III",
+      "name": "织生",
+      "nameEn": "Weaving Life",
+      "start": 330,
+      "end": 539,
+      "representative": 480
+    },
+    {
+      "id": "IV",
+      "name": "易形",
+      "nameEn": "Transformation",
+      "start": 540,
+      "end": 749,
+      "representative": 690
+    },
+    {
+      "id": "V",
+      "name": "自见",
+      "nameEn": "Self-Seeing",
+      "start": 750,
+      "end": 899,
+      "representative": 885
+    }
+  ],
+  "transitions": [
+    {
+      "from": "I",
+      "to": "II",
+      "frame": 150,
+      "type": "continuous",
+      "note": "静止机位以零速度起推；A2/A3 渐显"
+    },
+    {
+      "from": "II",
+      "to": "III",
+      "frame": 330,
+      "type": "continuous",
+      "note": "推进减速为零后接环绕；轨迹继续生长，外围网络渐生"
+    },
+    {
+      "from": "III",
+      "to": "IV",
+      "frame": 540,
+      "type": "continuous",
+      "note": "环绕减速为零后接拉远；Φ 形变由零渐入"
+    },
+    {
+      "from": "IV",
+      "to": "V",
+      "frame": 750,
+      "type": "continuous",
+      "note": "拉远减速为零后回正；Φ 渐回恒等，外围渐静"
+    }
+  ],
+  "caption": {
+    "text": "你看见了我，还是我生成了你？",
+    "start": 840,
+    "fadeFrames": 24,
+    "end": 899,
+    "layout": {
+      "fontSizePx": 54,
+      "letterSpacingEm": 0.12,
+      "bottomPx": 150,
+      "maxWidthPx": 1728,
+      "color": "#e6eeff"
+    }
+  },
+  "titleSafe": {
+    "left": 96,
+    "top": 54,
+    "right": 1824,
+    "bottom": 1026
+  }
+}

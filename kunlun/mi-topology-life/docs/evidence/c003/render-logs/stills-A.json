@@ -1,0 +1,263 @@
+{
+  "tag": "stills-A",
+  "mode": "stills",
+  "inputProps": {
+    "captionEnabled": true
+  },
+  "scale": 1,
+  "browser": "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
+  "launcher": "/home/user/human-ip-os/kunlun/mi-topology-life/scripts/chrome-swiftshader.sh",
+  "chromiumOptions": {
+    "gl": "swangle"
+  },
+  "composition": {
+    "id": "MI-Film",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 900
+  },
+  "results": [
+    {
+      "frame": 0,
+      "output": "out/film/stills/f000.png",
+      "ms": 757
+    },
+    {
+      "frame": 101,
+      "output": "out/film/stills/f101.png",
+      "ms": 852
+    },
+    {
+      "frame": 148,
+      "output": "out/film/stills/f148.png",
+      "ms": 900
+    },
+    {
+      "frame": 149,
+      "output": "out/film/stills/f149.png",
+      "ms": 831
+    },
+    {
+      "frame": 150,
+      "output": "out/film/stills/f150.png",
+      "ms": 860
+    },
+    {
+      "frame": 151,
+      "output": "out/film/stills/f151.png",
+      "ms": 998
+    },
+    {
+      "frame": 300,
+      "output": "out/film/stills/f300.png",
+      "ms": 981
+    },
+    {
+      "frame": 328,
+      "output": "out/film/stills/f328.png",
+      "ms": 1099
+    },
+    {
+      "frame": 329,
+      "output": "out/film/stills/f329.png",
+      "ms": 929
+    },
+    {
+      "frame": 330,
+      "output": "out/film/stills/f330.png",
+      "ms": 1008
+    },
+    {
+      "frame": 331,
+      "output": "out/film/stills/f331.png",
+      "ms": 985
+    },
+    {
+      "frame": 480,
+      "output": "out/film/stills/f480.png",
+      "ms": 1164
+    },
+    {
+      "frame": 538,
+      "output": "out/film/stills/f538.png",
+      "ms": 1115
+    },
+    {
+      "frame": 539,
+      "output": "out/film/stills/f539.png",
+      "ms": 1032
+    },
+    {
+      "frame": 540,
+      "output": "out/film/stills/f540.png",
+      "ms": 1048
+    },
+    {
+      "frame": 541,
+      "output": "out/film/stills/f541.png",
+      "ms": 1045
+    },
+    {
+      "frame": 690,
+      "output": "out/film/stills/f690.png",
+      "ms": 1141
+    },
+    {
+      "frame": 748,
+      "output": "out/film/stills/f748.png",
+      "ms": 1119
+    },
+    {
+      "frame": 749,
+      "output": "out/film/stills/f749.png",
+      "ms": 1195
+    },
+    {
+      "frame": 750,
+      "output": "out/film/stills/f750.png",
+      "ms": 1134
+    },
+    {
+      "frame": 751,
+      "output": "out/film/stills/f751.png",
+      "ms": 1083
+    },
+    {
+      "frame": 830,
+      "output": "out/film/stills/f830.png",
+      "ms": 1056
+    },
+    {
+      "frame": 840,
+      "output": "out/film/stills/f840.png",
+      "ms": 1076
+    },
+    {
+      "frame": 846,
+      "output": "out/film/stills/f846.png",
+      "ms": 1089
+    },
+    {
+      "frame": 885,
+      "output": "out/film/stills/f885.png",
+      "ms": 1067
+    },
+    {
+      "frame": 899,
+      "output": "out/film/stills/f899.png",
+      "ms": 1164
+    }
+  ],
+  "totalMs": 27189,
+  "libAllowed": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "browserLogs": [
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    }
+  ],
+  "badLogs": []
+}
