@@ -1,0 +1,37 @@
+[
+  {
+    "file": "mi-audio-master.wav",
+    "a": "fecdfe495509edc615efe4e5112e5b75af4480a3e5a9439a9a5a6f96a01123c6",
+    "b": "fecdfe495509edc615efe4e5112e5b75af4480a3e5a9439a9a5a6f96a01123c6"
+  },
+  {
+    "file": "mi-audio-final.m4a",
+    "a": "05b4b76916c90e696dcc2c81db1b5ac460b5a09206b9ac890b0e85b73755f5d5",
+    "b": "05b4b76916c90e696dcc2c81db1b5ac460b5a09206b9ac890b0e85b73755f5d5"
+  },
+  {
+    "file": "stems/01-body.wav",
+    "a": "d08096f07bbea14cfab76fd90ea1b183bce8e95eef916df0570ecea5fc1af782",
+    "b": "d08096f07bbea14cfab76fd90ea1b183bce8e95eef916df0570ecea5fc1af782"
+  },
+  {
+    "file": "stems/02-pulse.wav",
+    "a": "6b276d4f3feb2be7938db9ec4b685a9c16217d0809b01e3e68bc17c0b2d5e58c",
+    "b": "6b276d4f3feb2be7938db9ec4b685a9c16217d0809b01e3e68bc17c0b2d5e58c"
+  },
+  {
+    "file": "stems/03-grains.wav",
+    "a": "391ccdb09dd5dc26c0c0b14256e776159cb91b4ae659d94159e5ab5b7232f280",
+    "b": "391ccdb09dd5dc26c0c0b14256e776159cb91b4ae659d94159e5ab5b7232f280"
+  },
+  {
+    "file": "stems/04-resonance.wav",
+    "a": "8779594e18975f4b6403fbdb0e7e74c1603dc07d4b37a3b514d0e979a3e39792",
+    "b": "8779594e18975f4b6403fbdb0e7e74c1603dc07d4b37a3b514d0e979a3e39792"
+  },
+  {
+    "file": "stems/05-finale.wav",
+    "a": "64119c90da7c3ab16cef0fa55646539867f567102a1278e1a3aad11440247c68",
+    "b": "64119c90da7c3ab16cef0fa55646539867f567102a1278e1a3aad11440247c68"
+  }
+]

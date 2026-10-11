@@ -1,0 +1,280 @@
+{
+  "rows": [
+    [
+      "stills rendered (no error/WebGL logs)",
+      true,
+      "26 frames, bad logs 0"
+    ],
+    [
+      "composition 1920×1080 @30fps, 900 frames",
+      true,
+      "{\"id\":\"MI-Film\",\"width\":1920,\"height\":1080,\"fps\":30,\"durationInFrames\":900}"
+    ],
+    [
+      "determinism f899 (separate process, reversed)",
+      true,
+      "a9b574009e87f155"
+    ],
+    [
+      "determinism f885 (separate process, reversed)",
+      true,
+      "9f39820d17733b7c"
+    ],
+    [
+      "determinism f690 (separate process, reversed)",
+      true,
+      "3e70d785a504d09f"
+    ],
+    [
+      "determinism f480 (separate process, reversed)",
+      true,
+      "0c99d4d56623ca43"
+    ],
+    [
+      "determinism f300 (separate process, reversed)",
+      true,
+      "96c0fc1281014a5b"
+    ],
+    [
+      "determinism f150 (separate process, reversed)",
+      true,
+      "dfed8bd24687a870"
+    ],
+    [
+      "determinism f149 (separate process, reversed)",
+      true,
+      "147c5f46bab583de"
+    ],
+    [
+      "determinism f101 (separate process, reversed)",
+      true,
+      "d754995c595abf79"
+    ],
+    [
+      "second render process clean",
+      true,
+      "bad logs 0"
+    ],
+    [
+      "caption absent at f830",
+      true,
+      "0 px differ"
+    ],
+    [
+      "caption absent at f840",
+      true,
+      "0 px differ"
+    ],
+    [
+      "caption visible + in title-safe at f846",
+      true,
+      "9410 px, bbox x538–1347 y869–925"
+    ],
+    [
+      "caption visible + in title-safe at f885",
+      true,
+      "31839 px, bbox x535–1353 y864–925"
+    ],
+    [
+      "caption visible + in title-safe at f899",
+      true,
+      "31839 px, bbox x535–1353 y864–925"
+    ],
+    [
+      "transition I→II @150 continuous",
+      true,
+      "Δ before 0.000, across 0.000, after 0.000"
+    ],
+    [
+      "transition II→III @330 continuous",
+      true,
+      "Δ before 0.249, across 0.252, after 0.270"
+    ],
+    [
+      "transition III→IV @540 continuous",
+      true,
+      "Δ before 1.762, across 1.745, after 1.795"
+    ],
+    [
+      "transition IV→V @750 continuous",
+      true,
+      "Δ before 2.150, across 2.155, after 2.179"
+    ]
+  ],
+  "determinism": [
+    {
+      "frame": 899,
+      "a": "a9b574009e87f15567f51ef639615a44ff13a7b38196ac707707ad15037f1217",
+      "b": "a9b574009e87f15567f51ef639615a44ff13a7b38196ac707707ad15037f1217",
+      "equal": true
+    },
+    {
+      "frame": 885,
+      "a": "9f39820d17733b7cf323bc60c21bcd95832124453e520b98d810b53e3dab9f10",
+      "b": "9f39820d17733b7cf323bc60c21bcd95832124453e520b98d810b53e3dab9f10",
+      "equal": true
+    },
+    {
+      "frame": 690,
+      "a": "3e70d785a504d09f65d9d7a7fcc6a55f2ace723ccab6e75395d7218bfe0e13ad",
+      "b": "3e70d785a504d09f65d9d7a7fcc6a55f2ace723ccab6e75395d7218bfe0e13ad",
+      "equal": true
+    },
+    {
+      "frame": 480,
+      "a": "0c99d4d56623ca431bbc495c1ca06881ce1a6b805be9cbffdf92cabfb22dd722",
+      "b": "0c99d4d56623ca431bbc495c1ca06881ce1a6b805be9cbffdf92cabfb22dd722",
+      "equal": true
+    },
+    {
+      "frame": 300,
+      "a": "96c0fc1281014a5b2c62a23c306c683e436485757a53b056b79111b22da6f31b",
+      "b": "96c0fc1281014a5b2c62a23c306c683e436485757a53b056b79111b22da6f31b",
+      "equal": true
+    },
+    {
+      "frame": 150,
+      "a": "dfed8bd24687a870cec0375ff29c761000271ba87c774f92004d4cadd5232133",
+      "b": "dfed8bd24687a870cec0375ff29c761000271ba87c774f92004d4cadd5232133",
+      "equal": true
+    },
+    {
+      "frame": 149,
+      "a": "147c5f46bab583dec647e65c315396ca259bb596ac329ea888c977b3504e7068",
+      "b": "147c5f46bab583dec647e65c315396ca259bb596ac329ea888c977b3504e7068",
+      "equal": true
+    },
+    {
+      "frame": 101,
+      "a": "d754995c595abf79ef48606507c99dd7f588d21ee758f2f994b22ec1828dc0df",
+      "b": "d754995c595abf79ef48606507c99dd7f588d21ee758f2f994b22ec1828dc0df",
+      "equal": true
+    }
+  ],
+  "captionChecks": [
+    {
+      "frame": 830,
+      "changedPixels": 0,
+      "bbox": null
+    },
+    {
+      "frame": 840,
+      "changedPixels": 0,
+      "bbox": null
+    },
+    {
+      "frame": 846,
+      "changedPixels": 9410,
+      "bbox": {
+        "minX": 538,
+        "minY": 869,
+        "maxX": 1347,
+        "maxY": 925
+      }
+    },
+    {
+      "frame": 885,
+      "changedPixels": 31839,
+      "bbox": {
+        "minX": 535,
+        "minY": 864,
+        "maxX": 1353,
+        "maxY": 925
+      }
+    },
+    {
+      "frame": 899,
+      "changedPixels": 31839,
+      "bbox": {
+        "minX": 535,
+        "minY": 864,
+        "maxX": 1353,
+        "maxY": 925
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "from": "I",
+      "to": "II",
+      "frame": 150,
+      "type": "continuous",
+      "diffBefore": 0.00000884130658436214,
+      "diffAcross": 0.000008037551440329219,
+      "diffAfter": 0.00001912937242798354,
+      "lumaLast": 0.7063854673109791,
+      "lumaFirst": 0.7063863356558866
+    },
+    {
+      "from": "II",
+      "to": "III",
+      "frame": 330,
+      "type": "continuous",
+      "diffBefore": 0.24851723251028807,
+      "diffAcross": 0.2517111947016461,
+      "diffAfter": 0.27024353780864196,
+      "lumaLast": 9.500350507650548,
+      "lumaFirst": 9.502683377249785
+    },
+    {
+      "from": "III",
+      "to": "IV",
+      "frame": 540,
+      "type": "continuous",
+      "diffBefore": 1.7623900462962963,
+      "diffAcross": 1.745004983281893,
+      "diffAfter": 1.795109792952675,
+      "lumaLast": 14.476744336112366,
+      "lumaFirst": 14.47806908254366
+    },
+    {
+      "from": "IV",
+      "to": "V",
+      "frame": 750,
+      "type": "continuous",
+      "diffBefore": 2.149907568158436,
+      "diffAcross": 2.154597961676955,
+      "diffAfter": 2.1794177597736626,
+      "lumaLast": 8.346921610554258,
+      "lumaFirst": 8.348670830558262
+    }
+  ],
+  "framesA": [
+    0,
+    101,
+    148,
+    149,
+    150,
+    151,
+    300,
+    328,
+    329,
+    330,
+    331,
+    480,
+    538,
+    539,
+    540,
+    541,
+    690,
+    748,
+    749,
+    750,
+    751,
+    830,
+    840,
+    846,
+    885,
+    899
+  ],
+  "framesB": [
+    899,
+    885,
+    690,
+    480,
+    300,
+    150,
+    149,
+    101
+  ]
+}

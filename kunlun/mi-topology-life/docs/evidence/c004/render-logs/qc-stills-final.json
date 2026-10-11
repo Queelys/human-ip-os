@@ -1,0 +1,153 @@
+{
+  "tag": "qc-stills-final",
+  "mode": "stills",
+  "inputProps": {},
+  "scale": 1,
+  "browser": "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
+  "launcher": "/home/user/human-ip-os/kunlun/mi-topology-life/scripts/chrome-swiftshader.sh",
+  "chromiumOptions": {
+    "gl": "swangle"
+  },
+  "composition": {
+    "id": "MI-Final",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 900
+  },
+  "results": [
+    {
+      "frame": 0,
+      "output": "out/qc/final/f000.png",
+      "ms": 851
+    },
+    {
+      "frame": 101,
+      "output": "out/qc/final/f101.png",
+      "ms": 941
+    },
+    {
+      "frame": 300,
+      "output": "out/qc/final/f300.png",
+      "ms": 1155
+    },
+    {
+      "frame": 480,
+      "output": "out/qc/final/f480.png",
+      "ms": 1331
+    },
+    {
+      "frame": 690,
+      "output": "out/qc/final/f690.png",
+      "ms": 1528
+    },
+    {
+      "frame": 839,
+      "output": "out/qc/final/f839.png",
+      "ms": 1141
+    },
+    {
+      "frame": 840,
+      "output": "out/qc/final/f840.png",
+      "ms": 1265
+    },
+    {
+      "frame": 845,
+      "output": "out/qc/final/f845.png",
+      "ms": 1191
+    },
+    {
+      "frame": 850,
+      "output": "out/qc/final/f850.png",
+      "ms": 1166
+    },
+    {
+      "frame": 855,
+      "output": "out/qc/final/f855.png",
+      "ms": 1061
+    },
+    {
+      "frame": 870,
+      "output": "out/qc/final/f870.png",
+      "ms": 1155
+    },
+    {
+      "frame": 885,
+      "output": "out/qc/final/f885.png",
+      "ms": 1119
+    },
+    {
+      "frame": 892,
+      "output": "out/qc/final/f892.png",
+      "ms": 1076
+    },
+    {
+      "frame": 899,
+      "output": "out/qc/final/f899.png",
+      "ms": 1036
+    }
+  ],
+  "totalMs": 16509,
+  "libAllowed": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "browserLogs": [
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    }
+  ],
+  "badLogs": []
+}

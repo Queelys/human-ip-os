@@ -1,0 +1,23 @@
+composition {"id":"MI-Film","width":1920,"height":1080,"fps":30,"durationInFrames":900}
+still f839 → out/qc/film-nocap/f839.png (1073 ms)
+still f840 → out/qc/film-nocap/f840.png (1171 ms)
+still f845 → out/qc/film-nocap/f845.png (1094 ms)
+still f850 → out/qc/film-nocap/f850.png (1128 ms)
+still f855 → out/qc/film-nocap/f855.png (1130 ms)
+still f870 → out/qc/film-nocap/f870.png (1173 ms)
+still f885 → out/qc/film-nocap/f885.png (1234 ms)
+still f892 → out/qc/film-nocap/f892.png (1111 ms)
+still f899 → out/qc/film-nocap/f899.png (1126 ms)
+log: out/logs/qc-stills-film-nocap.json
+LIB-ALLOWED (9×): THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+browser messages: 9, error/WebGL messages: 0
+
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.

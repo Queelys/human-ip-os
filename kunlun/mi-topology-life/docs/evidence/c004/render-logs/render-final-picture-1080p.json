@@ -1,0 +1,38 @@
+{
+  "tag": "render-final-picture-1080p",
+  "mode": "video",
+  "inputProps": {},
+  "scale": 1,
+  "browser": "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
+  "launcher": "/home/user/human-ip-os/kunlun/mi-topology-life/scripts/chrome-swiftshader.sh",
+  "chromiumOptions": {
+    "gl": "swangle"
+  },
+  "composition": {
+    "id": "MI-Final",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationInFrames": 900
+  },
+  "output": "out/final/mi-final-picture-1080p.mp4",
+  "totalMs": 144836,
+  "libAllowed": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "browserLogs": [
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    }
+  ],
+  "badLogs": []
+}

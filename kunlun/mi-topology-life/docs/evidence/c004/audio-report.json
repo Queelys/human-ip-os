@@ -1,0 +1,269 @@
+{
+  "sampleRate": 48000,
+  "channels": 2,
+  "samples": 1440000,
+  "durationSeconds": 30,
+  "targetLufs": -16,
+  "truePeakLimitDbtp": -1,
+  "identity": {
+    "seed": 1263291721,
+    "version": "1.0.0",
+    "pulsePeriodSeconds": 3,
+    "pulseRateHz": 0.3333333333333333,
+    "pulseWidth": 0.25,
+    "ratios": [
+      1,
+      1.5,
+      2
+    ],
+    "voices": [
+      {
+        "id": "A1",
+        "s": 0,
+        "phaseOffset": 0,
+        "pitchHz": 660,
+        "pan": 0
+      },
+      {
+        "id": "A2",
+        "s": 0.3333333333333333,
+        "phaseOffset": 0.3333333333333333,
+        "pitchHz": 990,
+        "pan": 0.6062177826491071
+      },
+      {
+        "id": "A3",
+        "s": 0.6666666666666666,
+        "phaseOffset": 0.6666666666666666,
+        "pitchHz": 1320,
+        "pan": -0.6062177826491069
+      }
+    ]
+  },
+  "premix": {
+    "stats": {
+      "samples": 1440000,
+      "nonFinite": 0,
+      "peak": 0.9708877620907667,
+      "peakDbfs": -0.25661946202600117,
+      "rmsDbfs": -11.491739009293147,
+      "dcL": 2.218566785192987e-10,
+      "dcR": -5.473953722128201e-10,
+      "first": [
+        0,
+        0
+      ],
+      "last": [
+        0,
+        0
+      ],
+      "nearFullScale": 0
+    },
+    "loudness": {
+      "integratedLufs": -10.8,
+      "lraLu": 10.8,
+      "truePeakDbtp": -0.3
+    }
+  },
+  "attempts": [
+    {
+      "ceilingDb": -2,
+      "gainDb": -5.199999999999999,
+      "wav": {
+        "integratedLufs": -16,
+        "lraLu": 10.8,
+        "truePeakDbtp": -5.5
+      },
+      "aac": {
+        "integratedLufs": -16,
+        "lraLu": 10.8,
+        "truePeakDbtp": -5.5
+      },
+      "maxReductionDb": 0
+    }
+  ],
+  "master": {
+    "gainDb": -5.199999999999999,
+    "limiterCeilingDb": -2,
+    "limiterMaxReductionDb": 0,
+    "stats": {
+      "samples": 1440000,
+      "nonFinite": 0,
+      "peak": 0.5335425091970335,
+      "peakDbfs": -5.456619462026,
+      "rmsDbfs": -16.691739009292817,
+      "dcL": 1.2191931363478374e-10,
+      "dcR": -3.0081613157898096e-10,
+      "first": [
+        0,
+        0
+      ],
+      "last": [
+        0,
+        0
+      ],
+      "nearFullScale": 0
+    },
+    "wav": {
+      "file": "renders/audio/mi-audio-master.wav",
+      "loudness": {
+        "integratedLufs": -16,
+        "lraLu": 10.8,
+        "truePeakDbtp": -5.5
+      },
+      "sha256": "fecdfe495509edc615efe4e5112e5b75af4480a3e5a9439a9a5a6f96a01123c6"
+    },
+    "aac": {
+      "file": "renders/audio/mi-audio-final.m4a",
+      "loudness": {
+        "integratedLufs": -16,
+        "lraLu": 10.8,
+        "truePeakDbtp": -5.5
+      },
+      "sha256": "05b4b76916c90e696dcc2c81db1b5ac460b5a09206b9ac890b0e85b73755f5d5",
+      "bitrate": "256k"
+    }
+  },
+  "stems": {
+    "body": {
+      "file": "renders/audio/stems/01-body.wav",
+      "nameZh": "本体低频",
+      "stats": {
+        "samples": 1440000,
+        "nonFinite": 0,
+        "peak": 0.279630964378505,
+        "peakDbfs": -11.068294790562678,
+        "rmsDbfs": -17.592843221065184,
+        "dcL": 1.3691454133571262e-10,
+        "dcR": -2.9074098094779605e-10,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "nearFullScale": 0
+      },
+      "loudness": {
+        "integratedLufs": -17.8,
+        "lraLu": 9.2,
+        "truePeakDbtp": -11.1
+      },
+      "sha256": "d08096f07bbea14cfab76fd90ea1b183bce8e95eef916df0570ecea5fc1af782"
+    },
+    "pulse": {
+      "file": "renders/audio/stems/02-pulse.wav",
+      "nameZh": "身份脉冲",
+      "stats": {
+        "samples": 1440000,
+        "nonFinite": 0,
+        "peak": 0.16466343019444654,
+        "peakDbfs": -15.668056836062743,
+        "rmsDbfs": -26.562792342430953,
+        "dcL": 3.474109237915974e-16,
+        "dcR": 1.121095745723857e-16,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "nearFullScale": 0
+      },
+      "loudness": {
+        "integratedLufs": -21.4,
+        "lraLu": 15.9,
+        "truePeakDbtp": -15.7
+      },
+      "sha256": "6b276d4f3feb2be7938db9ec4b685a9c16217d0809b01e3e68bc17c0b2d5e58c"
+    },
+    "grains": {
+      "file": "renders/audio/stems/03-grains.wav",
+      "nameZh": "神经颗粒",
+      "stats": {
+        "samples": 1440000,
+        "nonFinite": 0,
+        "peak": 0.14167720747952592,
+        "peakDbfs": -16.974000237402066,
+        "rmsDbfs": -39.61189214031861,
+        "dcL": -8.361724754520716e-19,
+        "dcR": -6.053924185415934e-20,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "nearFullScale": 0
+      },
+      "loudness": {
+        "integratedLufs": -30,
+        "lraLu": 11.6,
+        "truePeakDbtp": -16.9
+      },
+      "sha256": "391ccdb09dd5dc26c0c0b14256e776159cb91b4ae659d94159e5ab5b7232f280"
+    },
+    "resonance": {
+      "file": "renders/audio/stems/04-resonance.wav",
+      "nameZh": "拓扑共振",
+      "stats": {
+        "samples": 1440000,
+        "nonFinite": 0,
+        "peak": 0.12687358583363553,
+        "peakDbfs": -17.93257570952559,
+        "rmsDbfs": -30.357151268205243,
+        "dcL": -1.6489401725049594e-11,
+        "dcR": -1.0752833805703733e-11,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "nearFullScale": 0
+      },
+      "loudness": {
+        "integratedLufs": -27.1,
+        "lraLu": 13.8,
+        "truePeakDbtp": -17.9
+      },
+      "sha256": "8779594e18975f4b6403fbdb0e7e74c1603dc07d4b37a3b514d0e979a3e39792"
+    },
+    "finale": {
+      "file": "renders/audio/stems/05-finale.wav",
+      "nameZh": "终章和声",
+      "stats": {
+        "samples": 1440000,
+        "nonFinite": 0,
+        "peak": 0.12438991999238652,
+        "peakDbfs": -18.104296230372434,
+        "rmsDbfs": -39.70928649303331,
+        "dcL": 1.4938264507975446e-12,
+        "dcR": 6.775712194601423e-13,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "nearFullScale": 0
+      },
+      "loudness": {
+        "integratedLufs": -26.9,
+        "lraLu": 13.1,
+        "truePeakDbtp": -18.1
+      },
+      "sha256": "64119c90da7c3ab16cef0fa55646539867f567102a1278e1a3aad11440247c68"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+composition {"id":"MI-Final","width":1920,"height":1080,"fps":30,"durationInFrames":900}
+still f0 → out/qc/final/f000.png (851 ms)
+still f101 → out/qc/final/f101.png (941 ms)
+still f300 → out/qc/final/f300.png (1155 ms)
+still f480 → out/qc/final/f480.png (1331 ms)
+still f690 → out/qc/final/f690.png (1528 ms)
+still f839 → out/qc/final/f839.png (1141 ms)
+still f840 → out/qc/final/f840.png (1265 ms)
+still f845 → out/qc/final/f845.png (1191 ms)
+still f850 → out/qc/final/f850.png (1166 ms)
+still f855 → out/qc/final/f855.png (1061 ms)
+still f870 → out/qc/final/f870.png (1155 ms)
+still f885 → out/qc/final/f885.png (1119 ms)
+still f892 → out/qc/final/f892.png (1076 ms)
+still f899 → out/qc/final/f899.png (1036 ms)
+log: out/logs/qc-stills-final.json
+LIB-ALLOWED (14×): THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+browser messages: 14, error/WebGL messages: 0
+
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
