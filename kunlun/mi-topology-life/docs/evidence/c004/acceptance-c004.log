@@ -1,0 +1,680 @@
+===== frozen (13:33:54)
+62d80fb0c63a0570085ca067f191cd7be9e1c0bbda4a96f5c3c29acee15599c5  renders/mi-visual-master-1080p.mp4
+c795d6409277fa1bafd30d490676ee1c758828768063216c54b4d6ce8b8d6147  renders/mi-preview-540p.mp4
+a5405e88b469bd5e08607922f96741f11df8305ab11e82eef375d403f29b5731  renders/mi-storyboard-contact-sheet.png
+EXIT 0 :: frozen
+===== bash -c node --version; npm --version; ffmpeg -version | head -1; "$REMOTION_BROWSER_EXECUTABLE" --version (13:33:55)
+v22.22.0
+10.9.4
+ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+Chromium 141.0.7390.37
+EXIT 0 :: bash -c node --version; npm --version; ffmpeg -version | head -1; "$REMOTION_BROWSER_EXECUTABLE" --version
+===== npm install (13:33:55)
+npm warn deprecated eslint@9.39.4: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 420 packages, and audited 421 packages in 7s
+
+101 packages are looking for funding
+  run `npm fund` for details
+
+13 vulnerabilities (1 moderate, 10 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+EXIT 0 :: npm install
+===== npm run lint (13:34:03)
+
+> kunlun-mi-topology-life@0.1.0 lint
+> eslint src tests scripts
+
+EXIT 0 :: npm run lint
+===== npm run typecheck (13:34:05)
+
+> kunlun-mi-topology-life@0.1.0 typecheck
+> tsc --noEmit
+
+EXIT 0 :: npm run typecheck
+===== npm run test:log (13:34:09)
+
+> kunlun-mi-topology-life@0.1.0 test:log
+> node scripts/test-log.mjs
+
+
+ RUN  v3.2.7 /home/user/human-ip-os/kunlun/mi-topology-life
+
+ ✓ tests/identity.test.ts > Mi identity kernel > is frozen and internally consistent 2ms
+ ✓ tests/identity.test.ts > Mi identity kernel > rejects an inconsistent kernel 1ms
+ ✓ tests/identity.test.ts > Mi identity kernel > core geometry preserves the declared Euler characteristic 48ms
+ ✓ tests/identity.test.ts > Mi identity kernel > satellite field is reproducible from the seed 3ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > default spec is valid 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > is deep-frozen (presentation code cannot mutate identity) 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > serialises canonically and round-trips 3ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > is versioned: σ = (seed, version) 1ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > locks the identity fingerprint and graph signature (regression guard) 10ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > fingerprint changes when any identity component changes 3ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-semver version 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-uint32 seed 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: mirror/other knot T(3,2) 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-coprime knot 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: minor ≥ major radius 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: anchor out of range 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: anchor order broken 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: anchor id swapped 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: graph missing edge 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: graph self loop 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: duplicate phase 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: zero period 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: non-positive scale bound 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > rejects invalid spec: extra deformation kind 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > declares every invariant with an id 0ms
+ ✓ tests/identity.test.ts > C002.1 identity data model > C001 view is derived from the V1.0 spec (single source of truth) 0ms
+ ✓ tests/identity.test.ts > C002.3 anchor identity stability > anchors are defined by curve parameter, not vertex index 0ms
+ ✓ tests/identity.test.ts > C002.3 anchor identity stability > anchor positions are identical across repeated evaluation 0ms
+ ✓ tests/identity.test.ts > C002.3 anchor identity stability > anchor world = Φ(K(s)) and labels/order survive deformation 1ms
+ ✓ tests/identity.test.ts > C002 core graph relations > G is the labelled K3 on the three anchors 0ms
+ ✓ tests/identity.test.ts > C002 core graph relations > graph signature is unchanged by deformation, periphery generation and serialisation 17ms
+ ✓ tests/property.test.ts > C002.8 property tests > legal-params: sampled Φ params validate and have scale > 0 36ms
+ ✓ tests/property.test.ts > C002.8 property tests > inverse-identity: Φ⁻¹∘Φ ≈ id and Φ∘Φ⁻¹ ≈ id for legal params 149ms
+ ✓ tests/film/identity.film.test.ts > C003.8 identity kernel is used, not copied or modified > film uses the C002 spec object itself, unchanged 2ms
+ ✓ tests/film/identity.film.test.ts > C003.8 identity kernel is used, not copied or modified > computing the whole film leaves the spec byte-identical 165ms
+ ✓ tests/property.test.ts > C002.8 property tests > inverse-identity-compositions: random chains of 1–8 primitives 20ms
+ ✓ tests/property.test.ts > C002.8 property tests > orientation: Jacobian det > 0 for legal Φ (chirality preserved) 14ms
+ ✓ tests/property.test.ts > C002.8 property tests > anchor-recovery: Φ⁻¹(anchor world) = K(s) for legal Φ 24ms
+ ✓ tests/property.test.ts > C002.8 property tests > motion-time: any global time gives legal params with scale > 0 26ms
+ ✓ tests/property.test.ts > C002.8 property tests > pulse-phase: phase differences equal the spec offsets at any time 14ms
+ ✓ tests/property.test.ts > C002.8 property tests > knot-geometry: legal radii give a closed, regular, non-degenerate sampled curve 375ms
+ ✓ tests/property.test.ts > C002.8 property tests > harness: failures are recorded with seeds and reproduce exactly via MI_PROPERTY_SEED 1ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > SO(3) rotation: orthonormal columns, det = +1, inverse exact 11ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > rotation by π about z matches closed form 0ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > positive uniform scale: inverse exact, non-positive rejected 5ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > z-twist: preserves z and distance to the z axis, inverse exact 4ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > compositions: inverse is reverse-order composition of inverses 5ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > every allowed Φ is orientation-preserving (Jacobian det > 0, so no mirror trefoil) 3ms
+ ✓ tests/deformation.test.ts > C002.4 primitives > forbidden primitives are rejected at runtime 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > defaults are the identity map 1ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { scale: +0 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { scale: -1 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { scale: 3.01 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { twist: 2 } 0ms
+ ✓ tests/deformation.test.ts > C002.4 Φ constraints from the spec > rejects out-of-family params { yaw: NaN } 0ms
+ ✓ tests/deformation.test.ts > C002.4 global-time driven deformation > is a pure function of time (order independent, repeatable) 1ms
+ ✓ tests/deformation.test.ts > C002.4 global-time driven deformation > stays inside Φ constraints on every film frame 32ms
+ ✓ tests/deformation.test.ts > C002.4 global-time driven deformation > is continuous in time: small Δt ⇒ small displacement 1ms
+ ✓ tests/deformation.test.ts > C002.3 anchors trackable in every test frame > all 900 film frames: anchors finite, Φ(K(s)), invertible, distinct, ordered 97ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > is closed: |K(1) − K(0)| ≈ 0 1ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > tangent is continuous across the seam: K′(1) = K′(0), K″(1) = K″(0) 1ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > is 1-periodic for arbitrary parameters 1ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > analytic first/second derivatives match finite differences 4ms
+ ✓ tests/trefoil.test.ts > C002.2 curve closure and tangent continuity > is regular: min |K′| ≥ closed-form bound > 0 36ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=64 is non-degenerate 1ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=256 is non-degenerate 4ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=512 is non-degenerate 12ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > uniform sampling n=1024 is non-degenerate 42ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > records the strand separation of K (numerical, not a proof) 40ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > rejects degenerate sample counts 1ms
+ ✓ tests/trefoil.test.ts > C002.2 sampling geometry safety > total curvature exceeds 4π (Fáry–Milnor necessary condition for a knot) 12ms
+ ✓ tests/trefoil.test.ts > C002.2 diagram check (numerical) > xy-projection has exactly 3 crossings of equal sign (trefoil diagram, fixed chirality) 110ms
+ ✓ tests/trefoil.test.ts > C001 ↔ C002 consistency > C001 mesh centre line is exactly K 12ms
+ ✓ tests/film/identity.film.test.ts > C003.8 anchors exist and keep identity on every frame > three anchors A1–A3 with their spec parameters, positioned at Φ(K(s)) 12ms
+ ✓ tests/film/identity.film.test.ts > C003.8 anchors exist and keep identity on every frame > pulse values are the unmodified P protocol 38ms
+ ✓ tests/film/identity.film.test.ts > C003.8 anchors exist and keep identity on every frame > ACT V: P gives the sequence A1 → A2 → A3 at 27 s, 28 s, 29 s; resonance is shared 1ms
+ ✓ tests/film/identity.film.test.ts > C003.8 main knot obeys the C002 deformation constraints > every frame: Φ params inside the spec bounds; only allowed primitives 32ms
+ ✓ tests/film/identity.film.test.ts > C003.8 main knot obeys the C002 deformation constraints > Φ is the identity in ACT I and at the final frame 2ms
+ ✓ tests/film/identity.film.test.ts > C003.8 main knot obeys the C002 deformation constraints > every frame: orientation preserved, exactly invertible, closed curve, tube thinner than 0.3 × separation 1214ms
+ ✓ tests/film/identity.film.test.ts > C003.8 main knot obeys the C002 deformation constraints > arc reveal is a monotone draw mask that ends tiling K exactly 107ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > visual envelopes never jump (all frames) 10ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > Φ pose parameters never jump (all frames) 69ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > anchor positions move continuously, including across act boundaries 189ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > at each boundary the step equals the local trend (no discontinuity) 1ms
+ ✓ tests/film/transitions.test.ts > C003.5 continuous transitions > caption: absent before 28 s, fades in from frame 840, fully visible from 864 to the end 20ms
+ ✓ tests/film/identity.film.test.ts > C003.8 no NaN / Infinity / invalid geometry > every number in every frame state is finite 370ms
+ ✓ tests/film/identity.film.test.ts > C003.8 no NaN / Infinity / invalid geometry > no degenerate geometry: alphas/intensities in [0, 1], arc lengths ≥ 0 27ms
+ ✓ tests/film/caption.test.ts > C003.6 caption > text is exactly the required line 1ms
+ ✓ tests/film/caption.test.ts > C003.6 caption > embedded font covers every caption code point 1ms
+ ✓ tests/film/caption.test.ts > C003.6 caption > font licence ships with the font 0ms
+ ✓ tests/film/caption.test.ts > C003.6 caption > typographic block fits the title-safe area (upper bound on advance width) 1ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > is a pure function of the frame (repeatable, order independent) 2ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > produces finite values on every frame 17ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > ACT I camera is fixed 5ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > ACT II pushes in, ACT IV pulls back, ACT V ends frontal 4ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > ACT III orbit is small-angle (< 30°) 0ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > has no jumps: per-frame steps and accelerations are bounded everywhere 4ms
+ ✓ tests/film/camera.test.ts > C003.2 camera rig > is at rest (zero velocity) at every act boundary 0ms
+ ✓ tests/audio/final.fixture.test.ts > writes out/test-logs/final-fixture.json 86ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > is reproducible from the seed 37ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > may vary by variant, while the identity core stays untouched 18ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > nodes keep clearance from the core curve; edges are valid 26ms
+ ✓ tests/neuralGraph.test.ts > C002.6 periphery (neural network + particles) > time-driven wobble is pure and bounded 8ms
+ ✓ tests/audio/audio.test.ts > C004.1 sound identity mapping reads C002 > uses the C002 spec object, unchanged 2ms
+ ✓ tests/audio/audio.test.ts > C004.1 sound identity mapping reads C002 > ids, phase offsets, pulse rate and seed come from the spec 1ms
+ ✓ tests/audio/audio.test.ts > C004.1 sound identity mapping reads C002 > follows the spec rather than hard-coding a protocol 0ms
+ ✓ tests/audio/audio.test.ts > C004.1 sound identity mapping reads C002 > no sustained partial collides with an identity-pulse pitch (or its 3rd harmonic) 9ms
+ ✓ tests/audio/audio.test.ts > C004.1 sound identity mapping reads C002 > pulse peak times are exactly where the C002 pulse reaches 1 1ms
+ ✓ tests/audio/audio.test.ts > C004.3 audio follows the global timeline > control signals equal the C003 envelopes at the same global time 3ms
+ ✓ tests/audio/audio.test.ts > C004.3 audio follows the global timeline > identity pulses peak on the P-protocol times: ±5 ms where envelopes are flat, ±1 frame everywhere audible 80ms
+ ✓ tests/audio/audio.test.ts > C004.4 sample hygiene and determinism > all stems: no NaN/Infinity, no DC, click-free edges 216ms
+ ✓ tests/debuggerFixtures.test.ts > debugger fixtures > writes expected anchor states for the browser check 4ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > phase differences between anchors are fixed on every film frame 47ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > is shift-equivariant: I_Ai(t) = I_A1(t − offset_i·T) 23ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > is periodic, bounded in [0, 1] and peaks at 1 250ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > depends only on t — evaluation order does not matter 1ms
+ ✓ tests/pulse.test.ts > C002.5 pulse protocol > default config: pulses never overlap (width ≤ smallest phase gap) 10ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > total frame count is exactly 900 (30 s × 30 fps) 1ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > acts match the shot plan exactly 1ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > every frame belongs to exactly one act (no gaps, no overlaps) 60ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > validator detects gaps, overlaps and short coverage 0ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > transition table: one per boundary, all continuous (no hard cuts) 0ms
+ ✓ tests/film/timeline.test.ts > C003.1 timeline > representative frames lie inside their acts 0ms
+ ✓ tests/audio/caption.final.test.ts > C004.5 final caption timing > matches the approved keypoints 2ms
+ ✓ tests/audio/caption.final.test.ts > C004.5 final caption timing > is zero before frame 841, rises monotonically, holds, then falls monotonically 13ms
+ ✓ tests/film/plan.fixture.test.ts > writes out/test-logs/film-plan.json 2ms
+ ✓ tests/rng.test.ts > seeded rng > produces an identical stream for the same seed 2ms
+ ✓ tests/rng.test.ts > seeded rng > locks the first values of the stream (regression guard) 9ms
+ ✓ tests/rng.test.ts > seeded rng > derives independent sub-streams per label 1ms
+ ✓ tests/time.test.ts > frame-driven time > maps frames to seconds at 30 fps 1ms
+ ✓ tests/time.test.ts > frame-driven time > loops exactly over the period, independent of evaluation order 1ms
+ ✓ tests/audio/audio.test.ts > C004.4 sample hygiene and determinism > every stem is audible in its designed window (no dead track) 48ms
+ ✓ tests/audio/audio.test.ts > C004.4 sample hygiene and determinism > identical output for a fixed seed (re-render every track) 2397ms
+ ✓ tests/audio/audio.test.ts > C004.4 sample hygiene and determinism > grain layer depends on the seed (different seed → different grains) 159ms
+
+ Test Files  18 passed (18)
+      Tests  134 passed (134)
+   Start at  13:34:10
+   Duration  6.32s (transform 658ms, setup 0ms, collect 1.73s, tests 9.47s, environment 3ms, prepare 1.31s)
+
+JSON report written to /home/user/human-ip-os/kunlun/mi-topology-life/out/test-logs/vitest.json
+
+EXIT 0 :: npm run test:log
+===== npm run build (13:34:17)
+
+> kunlun-mi-topology-life@0.1.0 build
+> remotion bundle src/index.ts --out-dir build && vite build --config vite.debugger.config.ts
+
+Bundling 6%
+Bundling 21%
+Bundling 32%
+Bundling 43%
+Bundling 54%
+Bundling 65%
+Bundling 71%
+Bundling 76%
+Bundling 81%
+Bundling 87%
+Bundling 92%
+Bundling 98%
+⚡️ Cached bundle. Subsequent renders will be faster.
++ /home/user/human-ip-os/kunlun/mi-topology-life/build
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 60 modules transformed.
+rendering chunks...
+computing gzip size...
+../build-debugger/index.html                    0.56 kB │ gzip:   0.41 kB
+../build-debugger/assets/index-EHUcqRyk.js  1,139.73 kB │ gzip: 315.58 kB
+✓ built in 2.65s
+EXIT 0 :: npm run build
+===== npm run test:integration (13:34:31)
+
+> kunlun-mi-topology-life@0.1.0 test:integration
+> node scripts/test-integration.mjs
+
+PASS  identity sources unchanged since C002 acceptance clean vs 4ec5e9f
+PASS  bundle: MI-Film 1920×1080 @30fps 900 frames {"width":1920,"height":1080,"fps":30,"durationInFrames":900}
+PASS  bundle: C001-RenderTest unchanged (90 frames) {"width":1920,"height":1080,"fps":30,"durationInFrames":90}
+PASS  studio preview: MI-Film WebGL canvas 1920×1080
+PASS  studio preview: no errors / WebGL warnings 0 (1 messages total)
+EXIT 0 :: npm run test:integration
+===== npm run render:test -- --log=error (13:34:45)
+
+> kunlun-mi-topology-life@0.1.0 render:test
+> remotion render src/index.ts C001-RenderTest out/c001-render-test.mp4 --log=error
+
+EXIT 0 :: npm run render:test -- --log=error
+===== npm run verify:video (13:35:10)
+
+> kunlun-mi-topology-life@0.1.0 verify:video
+> node scripts/verify-video.mjs out/c001-render-test.mp4 --width 1920 --height 1080 --fps 30 --frames 90 --duration 3
+
+ffprobe out/c001-render-test.mp4
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "duration": "3.000000",
+      "nb_frames": "90",
+      "nb_read_frames": "90"
+    }
+  ],
+  "format": {
+    "duration": "3.000000"
+  }
+}
+PASS  width                              1920 (want 1920)
+PASS  height                             1080 (want 1080)
+PASS  r_frame_rate                       30/1 (want 30)
+PASS  avg_frame_rate                     30/1 (want 30)
+PASS  nb_read_frames (decoded)           90 (want 90)
+PASS  nb_frames (container)              90 (want 90)
+PASS  stream duration                    3.000000s (want 3s)
+PASS  format duration                    3.000000s (want 3s ± half frame)
+PASS  codec                              h264
+PASS  pix_fmt                            yuv420p
+EXIT 0 :: npm run verify:video
+===== npm run verify:determinism (13:35:12)
+
+> kunlun-mi-topology-life@0.1.0 verify:determinism
+> node scripts/verify-determinism.mjs
+
+rendered frame 0 pass A: 0717ef3d7ea85a63459fdb425b0790f2f4997fa3300892f47dd82222dbea41c5
+rendered frame 45 pass A: 9cd03bb486b33e8b164b69979f286a055fa243310c4451ad21c274d025c3b02e
+rendered frame 89 pass A: 9844b3bb087798611355fe639b3abc17b81948ddc699654383676b35db1faffb
+rendered frame 89 pass B: 9844b3bb087798611355fe639b3abc17b81948ddc699654383676b35db1faffb
+rendered frame 45 pass B: 9cd03bb486b33e8b164b69979f286a055fa243310c4451ad21c274d025c3b02e
+rendered frame 0 pass B: 0717ef3d7ea85a63459fdb425b0790f2f4997fa3300892f47dd82222dbea41c5
+PASS  frame 0: pass A == pass B          0717ef3d7ea85a63
+PASS  frame 45: pass A == pass B         9cd03bb486b33e8b
+PASS  frame 89: pass A == pass B         9844b3bb08779861
+PASS  frames differ (motion present)     0 ≠ 45 ≠ 89
+PASS  mp4 re-render: all 90 frames equal eb1c056bd94ef38a vs eb1c056bd94ef38a
+EXIT 0 :: npm run verify:determinism
+===== npm run verify:preview (13:36:12)
+
+> kunlun-mi-topology-life@0.1.0 verify:preview
+> node scripts/verify-preview.mjs
+
+ENV-ALLOWED [studio] blocked outbound request: https://bugs.remotion.dev/api/4.0.525
+PASS  [build] page loads                 http://localhost:3125/C001-RenderTest
+PASS  [build] WebGL canvas mounted       1920×1080
+PASS  [build] no console/page errors     0 errors (0 env-allowed)
+PASS  [studio] page loads                http://localhost:3123/C001-RenderTest
+PASS  [studio] WebGL canvas mounted      1920×1080
+PASS  [studio] no console/page errors    0 errors (1 env-allowed)
+EXIT 0 :: npm run verify:preview
+===== npm run verify:debugger (13:36:43)
+
+> kunlun-mi-topology-life@0.1.0 verify:debugger
+> node scripts/verify-debugger.mjs
+
+PASS  page loads + WebGL canvas          width 1137
+PASS  shows identity version             1.0.0
+PASS  shows seed                         0x4B4C4D49
+PASS  shows fingerprint                  cd2e236379d37be5
+PASS  case default: anchors = kernel     frame 0, max|Δ| 2.2e-16, inv 0.0e+0, pulseΔ 0.0e+0
+PASS  case manual: anchors = kernel      frame 123, max|Δ| 4.4e-16, inv 5.6e-16, pulseΔ 0.0e+0
+PASS  case motion-f150: anchors = kernel frame 150, max|Δ| 2.2e-16, inv 1.8e-15, pulseΔ 0.0e+0
+PASS  case motion-f450: anchors = kernel frame 450, max|Δ| 2.2e-16, inv 2.3e-16, pulseΔ 0.0e+0
+PASS  case motion-f899: anchors = kernel frame 899, max|Δ| 2.2e-16, inv 4.4e-16, pulseΔ 0.0e+0
+PASS  scale=5 flagged outside Φ          paramsValid=false
+PASS  reset restores defaults            {"frame":0,"followMotion":false,"params":{"yaw":0,"pitch":0,"roll":0,"scale":1,"twist":0}}
+PASS  no console/page errors             0 errors
+screenshots: out/debugger/*.png
+EXIT 0 :: npm run verify:debugger
+===== npm run verify:film:video (13:36:56)
+
+> kunlun-mi-topology-life@0.1.0 verify:film:video
+> node scripts/verify-video.mjs renders/mi-visual-master-1080p.mp4 --width 1920 --height 1080 --fps 30 --frames 900 --duration 30 --no-audio && node scripts/verify-video.mjs renders/mi-preview-540p.mp4 --width 960 --height 540 --fps 30 --frames 900 --duration 30 --no-audio
+
+ffprobe renders/mi-visual-master-1080p.mp4
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "duration": "30.000000",
+      "nb_frames": "900",
+      "nb_read_frames": "900"
+    }
+  ],
+  "format": {
+    "duration": "30.000000"
+  }
+}
+PASS  width                              1920 (want 1920)
+PASS  height                             1080 (want 1080)
+PASS  r_frame_rate                       30/1 (want 30)
+PASS  avg_frame_rate                     30/1 (want 30)
+PASS  nb_read_frames (decoded)           900 (want 900)
+PASS  nb_frames (container)              900 (want 900)
+PASS  stream duration                    30.000000s (want 30s)
+PASS  format duration                    30.000000s (want 30s ± half frame)
+PASS  codec                              h264
+PASS  pix_fmt                            yuv420p
+PASS  no audio stream (silent master)    0 audio streams
+ffprobe renders/mi-preview-540p.mp4
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 960,
+      "height": 540,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "duration": "30.000000",
+      "nb_frames": "900",
+      "nb_read_frames": "900"
+    }
+  ],
+  "format": {
+    "duration": "30.000000"
+  }
+}
+PASS  width                              960 (want 960)
+PASS  height                             540 (want 540)
+PASS  r_frame_rate                       30/1 (want 30)
+PASS  avg_frame_rate                     30/1 (want 30)
+PASS  nb_read_frames (decoded)           900 (want 900)
+PASS  nb_frames (container)              900 (want 900)
+PASS  stream duration                    30.000000s (want 30s)
+PASS  format duration                    30.000000s (want 30s ± half frame)
+PASS  codec                              h264
+PASS  pix_fmt                            yuv420p
+PASS  no audio stream (silent master)    0 audio streams
+EXIT 0 :: npm run verify:film:video
+===== npm run verify:film (13:37:04)
+
+> kunlun-mi-topology-life@0.1.0 verify:film
+> node scripts/verify-film.mjs
+
+PASS  stills rendered (no error/WebGL logs) 26 frames, bad logs 0
+PASS  composition 1920×1080 @30fps, 900 frames {"id":"MI-Film","width":1920,"height":1080,"fps":30,"durationInFrames":900}
+PASS  determinism f899 (separate process, reversed) a9b574009e87f155
+PASS  determinism f885 (separate process, reversed) 9f39820d17733b7c
+PASS  determinism f690 (separate process, reversed) 3e70d785a504d09f
+PASS  determinism f480 (separate process, reversed) 0c99d4d56623ca43
+PASS  determinism f300 (separate process, reversed) 96c0fc1281014a5b
+PASS  determinism f150 (separate process, reversed) dfed8bd24687a870
+PASS  determinism f149 (separate process, reversed) 147c5f46bab583de
+PASS  determinism f101 (separate process, reversed) d754995c595abf79
+PASS  second render process clean        bad logs 0
+PASS  caption absent at f830             0 px differ
+PASS  caption absent at f840             0 px differ
+PASS  caption visible + in title-safe at f846 9410 px, bbox x538–1347 y869–925
+PASS  caption visible + in title-safe at f885 31839 px, bbox x535–1353 y864–925
+PASS  caption visible + in title-safe at f899 31839 px, bbox x535–1353 y864–925
+PASS  transition I→II @150 continuous    Δ before 0.000, across 0.000, after 0.000
+PASS  transition II→III @330 continuous  Δ before 0.249, across 0.252, after 0.270
+PASS  transition III→IV @540 continuous  Δ before 1.762, across 1.745, after 1.795
+PASS  transition IV→V @750 continuous    Δ before 2.150, across 2.155, after 2.179
+EXIT 0 :: npm run verify:film
+===== npm run audio:master (13:37:55)
+
+> kunlun-mi-topology-life@0.1.0 audio:master
+> vite-node src/audio/cli.ts
+
+{
+  "gainDb": -5.199999999999999,
+  "ceilingDb": -2,
+  "wav": {
+    "integratedLufs": -16,
+    "lraLu": 10.8,
+    "truePeakDbtp": -5.5
+  },
+  "aac": {
+    "integratedLufs": -16,
+    "lraLu": 10.8,
+    "truePeakDbtp": -5.5
+  }
+}
+EXIT 0 :: npm run audio:master
+===== node scripts/audio-determinism.mjs (13:38:07)
+PASS  reproducible: mi-audio-master.wav  fecdfe495509edc6
+PASS  reproducible: mi-audio-final.m4a   05b4b76916c90e69
+PASS  reproducible: stems/01-body.wav    d08096f07bbea14c
+PASS  reproducible: stems/02-pulse.wav   6b276d4f3feb2be7
+PASS  reproducible: stems/03-grains.wav  391ccdb09dd5dc26
+PASS  reproducible: stems/04-resonance.wav 8779594e18975f4b
+PASS  reproducible: stems/05-finale.wav  64119c90da7c3ab1
+EXIT 0 :: node scripts/audio-determinism.mjs
+===== npm run render:final:picture (13:38:20)
+
+> kunlun-mi-topology-life@0.1.0 render:final:picture
+> node scripts/film-render.mjs video --composition MI-Final --out out/final/mi-final-picture-1080p.mp4 --tag render-final-picture-1080p
+
+composition {"id":"MI-Final","width":1920,"height":1080,"fps":30,"durationInFrames":900}
+render out/final/mi-final-picture-1080p.mp4: 0% (1 s)
+[Tab 1, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 2, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[Tab 0, node_modules/three/build/three.core.js:2022] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+render out/final/mi-final-picture-1080p.mp4: 10% (13 s)
+render out/final/mi-final-picture-1080p.mp4: 20% (23 s)
+render out/final/mi-final-picture-1080p.mp4: 30% (34 s)
+render out/final/mi-final-picture-1080p.mp4: 40% (49 s)
+render out/final/mi-final-picture-1080p.mp4: 50% (64 s)
+render out/final/mi-final-picture-1080p.mp4: 60% (84 s)
+render out/final/mi-final-picture-1080p.mp4: 70% (101 s)
+render out/final/mi-final-picture-1080p.mp4: 80% (121 s)
+render out/final/mi-final-picture-1080p.mp4: 90% (139 s)
+render out/final/mi-final-picture-1080p.mp4: 100% (145 s)
+log: out/logs/render-final-picture-1080p.json
+LIB-ALLOWED (3×): THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+browser messages: 3, error/WebGL messages: 0
+EXIT 0 :: npm run render:final:picture
+===== npm run final:mux (13:40:45)
+
+> kunlun-mi-topology-life@0.1.0 final:mux
+> node scripts/final-mux.mjs
+
+muxed out/final/mi-final-picture-1080p.mp4 + renders/audio/mi-audio-final.m4a → renders/masters/mi-final-1080p.mp4
+EXIT 0 :: npm run final:mux
+===== npm run qc:final (13:40:46)
+
+> kunlun-mi-topology-life@0.1.0 qc:final
+> node scripts/qc-final.mjs
+
+PASS  streams: exactly 1 video + 1 audio 1 video, 1 audio
+PASS  video H.264 1920×1080              h264 1920×1080 yuv420p
+PASS  video 30 fps                       30/1 / 30/1
+PASS  video exactly 900 frames           decoded 900, container 900
+PASS  video duration ≈ 30 s              30.000000 s
+PASS  audio AAC 48 kHz stereo            aac 48000 Hz 2 ch stereo 222 kb/s
+PASS  audio duration ≈ 30 s              30.000000 s
+PASS  container duration ≈ 30 s          30.000000 s
+PASS  A/V start aligned (container)      video 0.000000, audio 0.000000
+PASS  audio: no NaN/Infinity             0 non-finite of 2881536
+PASS  loudness cross-check (loudnorm analyser) input_i -15.83 LUFS, input_tp -5.46 dBTP, input_lra 10.50 LU
+PASS  loudness ≈ −16 LUFS (±1 LU)        -16 LUFS integrated (LRA 10.8 LU)
+PASS  true peak ≤ −1 dBTP                -5.5 dBTP
+PASS  no clipping                        sample peak -5.46 dBFS, 0 samples ≥ 0.999
+PASS  no DC offset (|mean| < 1e-4)       L -1.05e-6, R 6.70e-6
+PASS  no head/tail click                 first -4.0e-11, last -3.1e-11, max step head 1.0e-9 tail 1.5e-6
+PASS  no unexpected silence (designed head/tail allowed) 1 silent spans [[0,0.42075]]; unexpected 0
+PASS  both channels carry signal (no dead track) RMS L -16.5 dBFS, R -16.9 dBFS
+PASS  all five stems non-silent          body -17.8 LUFS, pulse -21.4 LUFS, grains -30 LUFS, resonance -27.1 LUFS, finale -26.9 LUFS
+PASS  no abnormal black frames (designed ACT I fade allowed) fully black spans [[0,1.5]]; outside ACT I: 0; mostly-dark (info) [[0,7.2]]
+PASS  last frame has content (no black tail) max luma 255
+PASS  caption f839 (27.97 s)             expected opacity 0.000, measured 0.000, 0 px
+PASS  caption f840 (28.00 s)             expected opacity 0.000, measured 0.000, 0 px
+PASS  caption f845 (28.17 s)             expected opacity 0.210, measured 0.211, 10297 px bbox x538–1347 y869–925
+PASS  caption f850 (28.33 s)             expected opacity 0.790, measured 0.784, 27542 px bbox x536–1351 y865–925
+PASS  caption f855 (28.50 s)             expected opacity 1.000, measured 0.996, 31787 px bbox x535–1353 y864–925
+PASS  caption f870 (29.00 s)             expected opacity 1.000, measured 1.000, 31839 px bbox x535–1353 y864–925
+PASS  caption f885 (29.50 s)             expected opacity 1.000, measured 1.000, 31839 px bbox x535–1353 y864–925
+PASS  caption f892 (29.73 s)             expected opacity 0.562, measured 0.562, 20574 px bbox x538–1347 y869–925
+PASS  caption f899 (29.97 s)             expected opacity 0.003, measured 0.003, 0 px
+PASS  caption overlaid exactly once (f870 = C003 caption frame) pixel-identical
+PASS  QC renders: no error/WebGL messages 0
+PASS  C003 visual master file unchanged  62d80fb0c63a0570
+PASS  picture identical to C003 before caption (renders) f0:= f101:= f300:= f480:= f690:= f839:=
+PASS  final vs frozen master f0–839 (decoded PSNR) average 68.405094 dB, min 50.335144 dB
+PASS  identity pulses on C002 times (25 pulses, ≤ 1 frame) worst 14.5 ms
+PASS  measured pulse period = C002 period (15 intervals, 9–26.5 s) 3 s spec; measured 2.9999–3.0001 s
+PASS  measured phase offsets = C002 offsets A2−A1 0.3333, A3−A1 0.6667 (spec 0.0000, 0.3333, 0.6667)
+PASS  audio identity mapping = C002 spec ids A1/A2/A3, offsets 0.0000/0.3333/0.6667, period 3 s, seed 0x4b4c4d49
+PASS  A/V sync A1 @3.375 s               picture peak f101.58, sound peak f101.49, expected f101.25, A/V offset 2.9 ms
+PASS  A/V sync A1 @27.375 s              picture peak f821.33, sound peak f821.25, expected f821.25, A/V offset 2.5 ms
+PASS  A/V sync A2 @28.375 s              picture peak f851.19, sound peak f851.25, expected f851.25, A/V offset -1.8 ms
+PASS  A/V sync A3 @29.375 s              picture peak f880.41, sound peak f881.25, expected f881.25, A/V offset -28.0 ms
+EXIT 0 :: npm run qc:final
+===== bash -c ffprobe -v error -show_format -show_streams -of json renders/masters/mi-final-1080p.mp4 > out/logs/ffprobe-final.json && cat out/logs/ffprobe-final.json (13:44:23)
+{
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "film_grain": 0,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 40,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/90000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 2700000,
+            "duration": "30.000000",
+            "bit_rate": "5109967",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "900",
+            "extradata_size": 47,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0
+            },
+            "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "vendor_id": "[0][0][0][0]"
+            }
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1440000,
+            "duration": "30.000000",
+            "bit_rate": "222377",
+            "nb_frames": "1408",
+            "extradata_size": 5,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0
+            },
+            "tags": {
+                "language": "und",
+                "handler_name": "SoundHandler",
+                "vendor_id": "[0][0][0][0]"
+            }
+        }
+    ],
+    "format": {
+        "filename": "renders/masters/mi-final-1080p.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "20031459",
+        "bit_rate": "5341722",
+        "probe_score": 100,
+        "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "title": "弥：拓扑生命 Mi: Topological Life",
+            "encoder": "Lavf60.16.100",
+            "comment": "Made with Remotion 4.0.525"
+        }
+    }
+}
+EXIT 0 :: bash -c ffprobe -v error -show_format -show_streams -of json renders/masters/mi-final-1080p.mp4 > out/logs/ffprobe-final.json && cat out/logs/ffprobe-final.json
+===== frozen (13:44:23)
+62d80fb0c63a0570085ca067f191cd7be9e1c0bbda4a96f5c3c29acee15599c5  renders/mi-visual-master-1080p.mp4
+c795d6409277fa1bafd30d490676ee1c758828768063216c54b4d6ce8b8d6147  renders/mi-preview-540p.mp4
+a5405e88b469bd5e08607922f96741f11df8305ab11e82eef375d403f29b5731  renders/mi-storyboard-contact-sheet.png
+EXIT 0 :: frozen
+===== node scripts/collect-evidence-c004.mjs (13:44:23)
+out/test-logs/vitest.txt → docs/evidence/c004/vitest.txt
+out/test-logs/vitest.json → docs/evidence/c004/vitest.json
+out/test-logs/final-fixture.json → docs/evidence/c004/final-fixture.json
+out/audio/audio-report.json → docs/evidence/c004/audio-report.json
+out/logs/audio-determinism.json → docs/evidence/c004/audio-determinism.json
+out/logs/qc-final.json → docs/evidence/c004/qc-final.json
+out/logs/ffprobe-final.json → docs/evidence/c004/ffprobe-final.json
+out/logs/integration.json → docs/evidence/c004/integration.json
+out/logs/verify-film.json → docs/evidence/c004/verify-film.json
