@@ -28,7 +28,13 @@
     "verify:film": "node scripts/verify-film.mjs",
     "verify:film:video": "node scripts/verify-video.mjs renders/mi-visual-master-1080p.mp4 --width 1920 --height 1080 --fps 30 --frames 900 --duration 30 --no-audio && node scripts/verify-video.mjs renders/mi-preview-540p.mp4 --width 960 --height 540 --fps 30 --frames 900 --duration 30 --no-audio",
     "render:contact-sheet": "node scripts/contact-sheet.mjs",
-    "acceptance:c003": "bash scripts/acceptance-c003.sh"
+    "acceptance:c003": "bash scripts/acceptance-c003.sh",
+    "audio:master": "vite-node src/audio/cli.ts",
+    "render:final:picture": "node scripts/film-render.mjs video --composition MI-Final --out out/final/mi-final-picture-1080p.mp4 --tag render-final-picture-1080p",
+    "final:mux": "node scripts/final-mux.mjs",
+    "qc:final": "node scripts/qc-final.mjs",
+    "audio:determinism": "node scripts/audio-determinism.mjs",
+    "acceptance:c004": "bash scripts/acceptance-c004.sh"
   },
   "dependencies": {
     "@react-three/fiber": "9.7.0",
@@ -52,6 +58,7 @@
     "playwright": "1.56.1",
     "typescript": "5.9.3",
     "vite": "7.3.7",
+    "vite-node": "3.2.4",
     "vitest": "3.2.7"
   }
 }

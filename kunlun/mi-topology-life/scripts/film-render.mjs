@@ -6,6 +6,7 @@
  *
  *   node scripts/film-render.mjs stills --out <dir> --frames 0,101,... [--props JSON] [--tag name]
  *   node scripts/film-render.mjs video  --out <file.mp4> [--scale 0.5] [--tag name]
+ *   (--composition MI-Film | MI-Final; default MI-Film)
  *
  * Logs: out/logs/<tag>.json (all browser messages, timings, settings).
  */
@@ -23,13 +24,14 @@ const {positionals, values} = parseArgs({
 		scale: {type: 'string', default: '1'},
 		tag: {type: 'string'},
 		concurrency: {type: 'string', default: '3'},
+		composition: {type: 'string', default: 'MI-Film'},
 	},
 });
 const mode = positionals[0];
 const SERVE_URL = 'build';
-const COMPOSITION = 'MI-Film';
+const COMPOSITION = values.composition;
 const tag = values.tag ?? `${mode}-${Date.now()}`;
-const inputProps = {captionEnabled: true, ...JSON.parse(values.props)};
+const inputProps = {...(COMPOSITION === 'MI-Film' ? {captionEnabled: true} : {}), ...JSON.parse(values.props)};
 // The real browser comes from REMOTION_BROWSER_EXECUTABLE; it is launched via
 // scripts/chrome-swiftshader.sh, which opts in to SwiftShader explicitly.
 if (!process.env.REMOTION_BROWSER_EXECUTABLE) {

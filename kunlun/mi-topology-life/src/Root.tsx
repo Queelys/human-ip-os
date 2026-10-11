@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition} from 'remotion';
 import {C001RenderTest} from './compositions/C001RenderTest';
 import {MiFilm} from './compositions/MiFilm';
+import {MiFinal} from './compositions/MiFinal';
 import {C001, FILM, FILM_DURATION_IN_FRAMES} from './config/film';
 
 export const RemotionRoot: React.FC = () => {
@@ -23,6 +24,14 @@ export const RemotionRoot: React.FC = () => {
 				width={FILM.width}
 				height={FILM.height}
 				defaultProps={{captionEnabled: true}}
+			/>
+			<Composition
+				id="MI-Final"
+				component={MiFinal}
+				durationInFrames={FILM_DURATION_IN_FRAMES}
+				fps={FILM.fps}
+				width={FILM.width}
+				height={FILM.height}
 			/>
 		</>
 	);
