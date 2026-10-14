@@ -34,7 +34,8 @@
     "final:mux": "node scripts/final-mux.mjs",
     "qc:final": "node scripts/qc-final.mjs",
     "audio:determinism": "node scripts/audio-determinism.mjs",
-    "acceptance:c004": "bash scripts/acceptance-c004.sh"
+    "acceptance:c004": "bash scripts/acceptance-c004.sh",
+    "qc:c005": "bash scripts/c005-qc.sh"
   },
   "dependencies": {
     "@react-three/fiber": "9.7.0",
