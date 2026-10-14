@@ -1,0 +1,24 @@
+{
+  "current": {
+    "fingerprint": "cd2e236379d37be5",
+    "version": "1.0.0",
+    "seed": 1263291721
+  },
+  "specDocument": {
+    "fingerprint": "cd2e236379d37be5",
+    "versionLine": "1.0"
+  },
+  "c002Evidence": {
+    "fingerprint": "cd2e236379d37be5",
+    "version": "1.0.0",
+    "seed": 1263291721
+  },
+  "c004AudioReport": {
+    "version": "1.0.0",
+    "seed": 1263291721
+  },
+  "c004Fixture": {
+    "fingerprint": "cd2e236379d37be5"
+  },
+  "identitySourcesDiffSinceC002": "(none)"
+}

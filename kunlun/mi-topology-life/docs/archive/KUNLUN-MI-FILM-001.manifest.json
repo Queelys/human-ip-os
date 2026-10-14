@@ -1,0 +1,1275 @@
+{
+  "id": "KUNLUN-MI-FILM-001",
+  "title": "弥：拓扑生命 / Mi: Topological Life",
+  "series": "昆仑协议 Kunlun Protocol · 实验短片",
+  "spec": {
+    "durationSeconds": 30,
+    "frames": 900,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "audio": "48 kHz stereo"
+  },
+  "identity": {
+    "kernel": "MI Identity Kernel",
+    "version": "1.0.0",
+    "fingerprint": "cd2e236379d37be5",
+    "seed": "0x4B4C4D49"
+  },
+  "code": {
+    "gitHead": "c5451194fa0551d328d750415269b5a13f95016f",
+    "branch": "claude/kunlun-mi-topology-life-setup-hwfq6m",
+    "srcTree": "69add18a77c9443f3fc3dd32293373e82119b684"
+  },
+  "status": {
+    "technicalQc": "PASS (C005)",
+    "c004HumanFinalAcceptance": "PENDING",
+    "directorReview": "PENDING",
+    "release": "BLOCKED — not approved for publication"
+  },
+  "categories": [
+    {
+      "id": "character",
+      "zh": "角色设定",
+      "source": "C001–C002 人工编写；身份内核代码",
+      "files": [
+        {
+          "path": "FILM_BIBLE.md",
+          "bytes": 3842,
+          "sha256": "3e231ab01d18fd7e1a536b5078834ab87026ded46ef59ba7f6ebf7b6688a4cbc",
+          "lastCommit": "48fab86 2026-10-11"
+        },
+        {
+          "path": "docs/MI_IDENTITY_SPEC.md",
+          "bytes": 4096,
+          "sha256": "1f42bc44206a2d776ef0e20cca8032911b4812496f34f3bec38362d401e8c6f6",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/identity/anchors.ts",
+          "bytes": 1285,
+          "sha256": "6084cbdfff1ce4c707471003474d66fef5b6b79785a516536eb49da4f6e584b3",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/identity/invariants.ts",
+          "bytes": 6143,
+          "sha256": "c1b458f64e029f3ec1b8fa8405d8d332fbe2050e1d4bf41abc2d9e76e56b16da",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/identity/miKernel.ts",
+          "bytes": 5380,
+          "sha256": "d0d9b2f13f812304d2c8a26837442026f09f1c650860d6fd82e6fbf31467b4ba",
+          "lastCommit": "bde887f 2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "math",
+      "zh": "数学规则",
+      "source": "C002",
+      "files": [
+        {
+          "path": "docs/MI_MATH_RULES.md",
+          "bytes": 6255,
+          "sha256": "9610c4eeaa306d47e474d924bfca69efbc2c8f5d19240c45550d3fa1421124b7",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/geometry/trefoil.ts",
+          "bytes": 5491,
+          "sha256": "6841434c2186b72d71d86d93de7310e4f4703d9dd7f34030279bb12de47e011b",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/motion/deformation.ts",
+          "bytes": 9147,
+          "sha256": "ef2646966e9dc2648cd024d60fee97ae8b8fb88545cbfa25b57459320eb3c963",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/motion/pulse.ts",
+          "bytes": 1498,
+          "sha256": "3a1ac4d5377deffad1a7a9da1194bcb68d2a0705cad9f0753350de661c76df6b",
+          "lastCommit": "bde887f 2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "zh": "代码版本",
+      "source": "git 仓库（见 code.gitHead / code.srcTree）",
+      "files": [
+        {
+          "path": "package.json",
+          "bytes": 3138,
+          "sha256": "8b3657b28a59074ea414f14011d679969412307b577c3883a98351088233ddfb",
+          "lastCommit": "e68a5be 2026-10-14"
+        },
+        {
+          "path": "package-lock.json",
+          "bytes": 236032,
+          "sha256": "250eeeb7739d1ede054fb048cbce4ff4bf6777f8a7efac8ea47900739d17503a",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "remotion.config.ts",
+          "bytes": 816,
+          "sha256": "8fe17013c43a52190d804b408514c4f04d8c68f8af67e4601d6662c392a4faf9",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "tsconfig.json",
+          "bytes": 606,
+          "sha256": "e40472c85286825a03c5b06001c4d26819b1a4dce1e76647e7c36fae52094db5",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/Root.tsx",
+          "bytes": 941,
+          "sha256": "f0a8b2ac38f0671e8a3e3fc9d3db61950761311707aaf6772762cba934520d1a",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/audio/cli.ts",
+          "bytes": 6384,
+          "sha256": "9c6b02e98cff83b910acda165a923a2c5fca826530851d080a85ec4d4328d633",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/audio/constants.ts",
+          "bytes": 353,
+          "sha256": "cf37f9d32a253b92a5dd2638ae5965cee606d78b99c8407c307074e91a75c9bb",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/audio/control.ts",
+          "bytes": 2123,
+          "sha256": "4074cf74667cd021fcaf17aa434949c03b5160765aac7406e9bbd6648354a8f0",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/audio/identity.ts",
+          "bytes": 2459,
+          "sha256": "998d2e76a15fc9b5c61cad86d2afb2e28dd30757d5eb50b6f298345eacf1297c",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/audio/mix.ts",
+          "bytes": 4144,
+          "sha256": "fe8db4dffde463f0b7162f41f5583c2ef1a85b41575fe65a5b63f621a4dd3c0e",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/audio/tracks.ts",
+          "bytes": 7453,
+          "sha256": "a695d1cee7b67f0c293763e8150fd5dd19696bd0f1488667437456f794536ab6",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/audio/wav.ts",
+          "bytes": 1270,
+          "sha256": "153370f20a3af6c4276008d34103b48e00f17030691e30e432a1e184f6bb8b96",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/compositions/C001RenderTest.tsx",
+          "bytes": 1350,
+          "sha256": "794571a681c9cc9b751caa37ed130a6a1802c32210c0d3df4481e82ed9a319ea",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "src/compositions/Caption.tsx",
+          "bytes": 1962,
+          "sha256": "5856e5c0567310268c9d5a5b74d705b4bc54863ca2659d9160ad5a7174932c82",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/compositions/MiFilm.tsx",
+          "bytes": 2552,
+          "sha256": "7cc0683de0b0a44cf403c66d8da83847fd7715630f8153e98e3025a4aa201289",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/compositions/MiFinal.tsx",
+          "bytes": 737,
+          "sha256": "fb3c0e6aa7834a15c86dfd875377daf0ac7c3fcbc0c903ad651df0f63ff90add",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/config/film.ts",
+          "bytes": 558,
+          "sha256": "e2fe42e7a5e428fbd1ad601ea4f18d5bdf9ddf9f9562a8b5218a2e7df5303a1c",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "src/core/geometry.ts",
+          "bytes": 1474,
+          "sha256": "e3bb91c080653a9b5e84f6a3f5dc52f02749cba153c3d5dc3a2cd57c847990de",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "src/core/identity.ts",
+          "bytes": 2125,
+          "sha256": "0e3af8f9c52919b62703d1526cbb68094591035db3daad80ce1abf5603983832",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/core/rng.ts",
+          "bytes": 1190,
+          "sha256": "eb09b061eb38d663042bb10a50f702f364d14ab8936e490ffb0c9cd951b2df65",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "src/core/time.ts",
+          "bytes": 627,
+          "sha256": "a8705545f57b4e1c86ac15e974aee839a76afb014fe4a001dc22cc5f4ed0312a",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "src/core/topology.ts",
+          "bytes": 1502,
+          "sha256": "70cb1658e3a13b8941b3a7887a2d8bd78e6e0d875ebad783237150818f4ab7d3",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "src/debugger/DebuggerApp.tsx",
+          "bytes": 8569,
+          "sha256": "95337d7fde80b52f8c11d0ba20aa9c0e4b9857ddc435ea53564d29347f88eab0",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/debugger/IdentityScene.tsx",
+          "bytes": 5795,
+          "sha256": "343513a48436f719948385178bf7c47714ec637b6d54c91a209bde555bb2374f",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/debugger/main.tsx",
+          "bytes": 294,
+          "sha256": "7067252b09e020189e612e00cfb895bd12bc067f86caf7053de2be89559555ba",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/film/camera.ts",
+          "bytes": 3320,
+          "sha256": "dbd446bd91c1411e1729a55e9980f104da418b1dae9c1a488a2d7ab6f295c5bb",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/film/caption.ts",
+          "bytes": 1123,
+          "sha256": "85157f4db8c6d840ece58c8bf797a40016aa289149cd12a45fd4e4cd0ff27eae",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/film/choreography.ts",
+          "bytes": 12261,
+          "sha256": "7b7e97117493e2df100966fc3bd2ea080bdb46ef74551f2933e7f948bb506d16",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/film/easing.ts",
+          "bytes": 1246,
+          "sha256": "598f9cf1e2b89d743eb28815aea7cc6433c9578f81213115a8576558bc408aba",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/film/starfield.ts",
+          "bytes": 1985,
+          "sha256": "93cf9e51b9b6eb2cae0de9753abb2bf8821f3adcfb919732f6ca162f626b8817",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/film/timeline.ts",
+          "bytes": 3879,
+          "sha256": "e353eeda6c2b6713c6c8b167bf048ce672440a433350e0d281272d3b2190a717",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/film/visual.ts",
+          "bytes": 449,
+          "sha256": "4894d0f4cc08ca5df7a24ffaf1abb34c027919ddcde265fc528fb479cf9c4abc",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/final/captionTiming.ts",
+          "bytes": 734,
+          "sha256": "262f8518e5ee06d8f759fc6fdba4951880c660c91ed1ca05c727452185614520",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "src/geometry/neuralGraph.ts",
+          "bytes": 5195,
+          "sha256": "61515e482d6b84b38af99b57e5120c48fef7a19cc17abfe1c7ce7f8181f630db",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/geometry/trefoil.ts",
+          "bytes": 5491,
+          "sha256": "6841434c2186b72d71d86d93de7310e4f4703d9dd7f34030279bb12de47e011b",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/geometry/vec3.ts",
+          "bytes": 1237,
+          "sha256": "8a5b4ab00fac6ae80c8c954043841346fdbc2546c8766dc48be86f3e6ca2cf7f",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/identity/anchors.ts",
+          "bytes": 1285,
+          "sha256": "6084cbdfff1ce4c707471003474d66fef5b6b79785a516536eb49da4f6e584b3",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/identity/invariants.ts",
+          "bytes": 6143,
+          "sha256": "c1b458f64e029f3ec1b8fa8405d8d332fbe2050e1d4bf41abc2d9e76e56b16da",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/identity/miKernel.ts",
+          "bytes": 5380,
+          "sha256": "d0d9b2f13f812304d2c8a26837442026f09f1c650860d6fd82e6fbf31467b4ba",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/index.ts",
+          "bytes": 105,
+          "sha256": "5462d3268136731ce43bfd7c5072ea1ba48b51fec94fa30076f5044f4b39e4a2",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "src/motion/deformation.ts",
+          "bytes": 9147,
+          "sha256": "ef2646966e9dc2648cd024d60fee97ae8b8fb88545cbfa25b57459320eb3c963",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/motion/pulse.ts",
+          "bytes": 1498,
+          "sha256": "3a1ac4d5377deffad1a7a9da1194bcb68d2a0705cad9f0753350de661c76df6b",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "src/scenes/TestObject.tsx",
+          "bytes": 1820,
+          "sha256": "36b6e14cccd7875f179c43173fe510994441e29a2fca535ef6c1972473e5743b",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "src/scenes/film/Anchors.tsx",
+          "bytes": 2308,
+          "sha256": "9932cf0afe00f570550062935afd0bf9a22a0c8578990794a4aec74026f5d1ab",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/scenes/film/CameraRig.tsx",
+          "bytes": 823,
+          "sha256": "af07eda17bc8823f1f167a0a18d816a364d8b37710483867fa3059f35cc77d42",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/scenes/film/CoreKnot.tsx",
+          "bytes": 3324,
+          "sha256": "0de197db449a533d67b354f1ed5e66a3bb724fa8d6f57621fa69c31d8098e894",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/scenes/film/FilmBackground.tsx",
+          "bytes": 1175,
+          "sha256": "3b5909adbfbd741cf97b2c1f541d65815e9d1ae763ebe4db7a31e3e986935480",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/scenes/film/Network.tsx",
+          "bytes": 3811,
+          "sha256": "009d00945e42e6804d4d729a7ada06c6d0af7fd1a030a4d916db7eeaa714fe41",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/scenes/film/Starfield.tsx",
+          "bytes": 2026,
+          "sha256": "b0b8bf9a807faa2c43e84cc9030c858225243f2a3c2901cc62c322b867472951",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/scenes/film/textures.ts",
+          "bytes": 803,
+          "sha256": "7684479d7be156a0c37dc155d116fc5d8837c5a5fc90354fe6f6549732a81696",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "src/scenes/film/useDisposable.ts",
+          "bytes": 480,
+          "sha256": "b00bc0e95060002f3eae1d315ada56e27736d6c170bcc5ff40b2ce1a9426a0f1",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "scripts/acceptance-c003.sh",
+          "bytes": 1403,
+          "sha256": "757b2dc0a4f444374cbb2537a3cd1a165c389f384e3ca2ffaa8876be58947aad",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "scripts/acceptance-c004.sh",
+          "bytes": 1970,
+          "sha256": "4562b7b19a1cd55c118d4a66018e176998cd5e37ff7af3544126b12546c95268",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "scripts/archive-manifest.mjs",
+          "bytes": 4473,
+          "sha256": "94d880ae254ef95f784a76d253e1d8e22972659e143540a45105f01c4c1d8de9",
+          "lastCommit": "e68a5be 2026-10-14"
+        },
+        {
+          "path": "scripts/audio-determinism.mjs",
+          "bytes": 1160,
+          "sha256": "2d9e8b935778d067216917785ad1084c113007943eb6ec6837114c76459b7a9d",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "scripts/c005-identity-check.mjs",
+          "bytes": 2798,
+          "sha256": "caa485bedf1e7864b3084e27208501d36bb62d551ad7dc37b8ff06ae071095ff",
+          "lastCommit": "e68a5be 2026-10-14"
+        },
+        {
+          "path": "scripts/c005-keyframes.mjs",
+          "bytes": 2400,
+          "sha256": "0cf90f174678e4d430616850dd4cd7779a222cee438b74395460f998277e31f9",
+          "lastCommit": "e68a5be 2026-10-14"
+        },
+        {
+          "path": "scripts/c005-qc.sh",
+          "bytes": 1397,
+          "sha256": "3ccaa2b997c6bacffc15365dffb9c32018f2d9656dc9b69d9bb8522b09be9525",
+          "lastCommit": "e68a5be 2026-10-14"
+        },
+        {
+          "path": "scripts/chrome-swiftshader.sh",
+          "bytes": 418,
+          "sha256": "b0049a87b72051a9909a508099549477300f72a94fbffba13c175de096bed15f",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "scripts/collect-evidence-c003.mjs",
+          "bytes": 1451,
+          "sha256": "1393c2fd4e03df5d1a8d54cad80bd8eb4125ca79b77b1f4afad5ba0537ced18c",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "scripts/collect-evidence-c004.mjs",
+          "bytes": 1461,
+          "sha256": "2e09e30bd23239dfb93baf2ee7ad96a165b5644258b8774b8077619860bedced",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "scripts/collect-evidence-c005.mjs",
+          "bytes": 1041,
+          "sha256": "b00f2b28ee63422436a1020ce2f4114124545dfb2a26f9be9b1c3a1b19ea611e",
+          "lastCommit": "e68a5be 2026-10-14"
+        },
+        {
+          "path": "scripts/collect-evidence.mjs",
+          "bytes": 893,
+          "sha256": "3ebc49cf0240f2ce7d155ce92f42bf662a6eb1050d0eb43bf4578517fb4e9115",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "scripts/contact-sheet.mjs",
+          "bytes": 1859,
+          "sha256": "c4ce52f0517a0bd36d9a881476bfeeb6633130d52932eb7f765eecdbd084a65a",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "scripts/film-render.mjs",
+          "bytes": 5687,
+          "sha256": "b0d534e6fbde042bb3b5417ab805aa62c0df007dae1fc20b6bae4f06e9e49b1a",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "scripts/final-mux.mjs",
+          "bytes": 695,
+          "sha256": "d1bb527a7841e14a7e0d853c9cda48fb9727841c3298899519a49d5ce21b8c29",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "scripts/lib.mjs",
+          "bytes": 3250,
+          "sha256": "618e62d1912b61f588dc6c4fc1d1df38ac26d5a946dcf3c57c2b35e130d3fe8f",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "scripts/qc-c005-frames.mjs",
+          "bytes": 7987,
+          "sha256": "73b234b68c9a2c1e58da894e9686a7e635e58e38432db11c99d1dd050864e4be",
+          "lastCommit": "e68a5be 2026-10-14"
+        },
+        {
+          "path": "scripts/qc-final.mjs",
+          "bytes": 20016,
+          "sha256": "d174781c3ad9c55f5d1fde434cd0a68d7e1ce0ad4f47a5b1f16b99c44489d9ab",
+          "lastCommit": "b28cc0c 2026-10-11"
+        },
+        {
+          "path": "scripts/test-integration.mjs",
+          "bytes": 4415,
+          "sha256": "17941c9cf0d07f8ac2e22cb4edc99ef526ac358773d2435d2b3602317d324b9b",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "scripts/test-log.mjs",
+          "bytes": 869,
+          "sha256": "8889601815192c9bee77dba12d37042661041cc87444a0b24df1bb0381b17a2c",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "scripts/verify-debugger.mjs",
+          "bytes": 5291,
+          "sha256": "5c305560d4504b765f33ee357d8f0ff0dcb7015dec1e71f6b5d9badba8858f3e",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "scripts/verify-determinism.mjs",
+          "bytes": 1936,
+          "sha256": "c4aa336dcfe6cd050ce7747a5ff23128f9921981a9fb6335fa48aa6221d4dbae",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "scripts/verify-film.mjs",
+          "bytes": 5863,
+          "sha256": "d3b5d8abddd243bb08cda84a4da5b93569e8187059dc27fc38e874d549facbd5",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "scripts/verify-preview.mjs",
+          "bytes": 4982,
+          "sha256": "5e025adf90f399c6c8295cb5a955ae47a9642ea28adac8b45304bc8502899e4e",
+          "lastCommit": "0ff5a0f 2026-10-10"
+        },
+        {
+          "path": "scripts/verify-video.mjs",
+          "bytes": 2549,
+          "sha256": "d322934a7fd8b9eaeebe765ddbb187b5472966aedb6f2f896bfa5460f435b3e8",
+          "lastCommit": "89c6e0d 2026-10-11"
+        }
+      ]
+    },
+    {
+      "id": "storyboard",
+      "zh": "分镜",
+      "source": "C003 渲染联系表；C005 从最终母版解码的审片关键帧",
+      "files": [
+        {
+          "path": "SHOT_LIST.md",
+          "bytes": 1256,
+          "sha256": "104caa54baa7e127b933c257adfe2b5d2622836995ac5470137187c45efc5266",
+          "lastCommit": "4ee567f 2026-10-10"
+        },
+        {
+          "path": "docs/C003_SHOT_LIST.md",
+          "bytes": 4774,
+          "sha256": "c054aaee8485ebe95164df9e7b030a98b053cf111767c21e29b8f430d560fb51",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "docs/C003_CAMERA_SPEC.md",
+          "bytes": 2457,
+          "sha256": "c8b9c42b5090902ca0c381f340035378f858c2a98e516d98eb8a63e80e02c393",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "docs/C003_VISUAL_SPEC.md",
+          "bytes": 3435,
+          "sha256": "085a7a16ac4fd6a2f99f798edc62bcab52416847df207fe0417daebb97531d35",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "renders/mi-storyboard-contact-sheet.png",
+          "bytes": 1341144,
+          "sha256": "a5405e88b469bd5e08607922f96741f11df8305ab11e82eef375d403f29b5731",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/review/c005/keyframes/K1-f101.jpg",
+          "bytes": 15119,
+          "sha256": "ae4be72c442f5302b4a3029c8d36f37741127c0dd5edea966726c3f67ec9f008",
+          "lastCommit": "c545119 2026-10-14"
+        },
+        {
+          "path": "docs/review/c005/keyframes/K2-f240.jpg",
+          "bytes": 28111,
+          "sha256": "b929c925ca3b2d62d3aaa372b52e794df6ea92281c3d12e22974ea269eac748d",
+          "lastCommit": "c545119 2026-10-14"
+        },
+        {
+          "path": "docs/review/c005/keyframes/K3-f329.jpg",
+          "bytes": 57332,
+          "sha256": "5888d408a96482f9d88ade089c6ccb085fbb25e64990b3b2f541a4d35844386c",
+          "lastCommit": "c545119 2026-10-14"
+        },
+        {
+          "path": "docs/review/c005/keyframes/K4-f420.jpg",
+          "bytes": 122611,
+          "sha256": "30437512a31e721c231614c25432601db1d8222c5cabb2aeea37408165ce6808",
+          "lastCommit": "c545119 2026-10-14"
+        },
+        {
+          "path": "docs/review/c005/keyframes/K5-f539.jpg",
+          "bytes": 235443,
+          "sha256": "6b12567b09b44257bcb7d9ce4edbfec99dd79a75a42578c87def494ea7d4abc6",
+          "lastCommit": "c545119 2026-10-14"
+        },
+        {
+          "path": "docs/review/c005/keyframes/K6-f650.jpg",
+          "bytes": 206077,
+          "sha256": "fb1514258f8d4d0c867623099e8fb321a07adb1c5ef8a92694e36d7ff84c59c0",
+          "lastCommit": "c545119 2026-10-14"
+        },
+        {
+          "path": "docs/review/c005/keyframes/K7-f749.jpg",
+          "bytes": 197001,
+          "sha256": "4a22b06f113c41551152ef7babecd54647ca95b09439f1c0caadd5b1b10fc2dc",
+          "lastCommit": "c545119 2026-10-14"
+        },
+        {
+          "path": "docs/review/c005/keyframes/K8-f855.jpg",
+          "bytes": 160983,
+          "sha256": "9c3a76d78d24727778555c5e8af4e41f697f982f67f021c5b6cfebda771329fd",
+          "lastCommit": "c545119 2026-10-14"
+        },
+        {
+          "path": "docs/review/c005/keyframes/K9-f899.jpg",
+          "bytes": 144942,
+          "sha256": "7886b55c5215bbc9d58fccf3250f255928ce94962eda7ecc9c3373531e965480",
+          "lastCommit": "c545119 2026-10-14"
+        },
+        {
+          "path": "docs/review/c005/review-sheet.jpg",
+          "bytes": 210279,
+          "sha256": "d3f30b72707e0d108e81370283dd975f09f01e0d71914219bc1413761656550c",
+          "lastCommit": "c545119 2026-10-14"
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "zh": "音频素材",
+      "source": "C004 `npm run audio:master`（程序化合成，无外部素材）",
+      "files": [
+        {
+          "path": "renders/audio/mi-audio-master.wav",
+          "bytes": 8640044,
+          "sha256": "fecdfe495509edc615efe4e5112e5b75af4480a3e5a9439a9a5a6f96a01123c6",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "renders/audio/mi-audio-final.m4a",
+          "bytes": 840947,
+          "sha256": "05b4b76916c90e696dcc2c81db1b5ac460b5a09206b9ac890b0e85b73755f5d5",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "renders/audio/stems/01-body.wav",
+          "bytes": 8640044,
+          "sha256": "d08096f07bbea14cfab76fd90ea1b183bce8e95eef916df0570ecea5fc1af782",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "renders/audio/stems/02-pulse.wav",
+          "bytes": 8640044,
+          "sha256": "6b276d4f3feb2be7938db9ec4b685a9c16217d0809b01e3e68bc17c0b2d5e58c",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "renders/audio/stems/03-grains.wav",
+          "bytes": 8640044,
+          "sha256": "391ccdb09dd5dc26c0c0b14256e776159cb91b4ae659d94159e5ab5b7232f280",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "renders/audio/stems/04-resonance.wav",
+          "bytes": 8640044,
+          "sha256": "8779594e18975f4b6403fbdb0e7e74c1603dc07d4b37a3b514d0e979a3e39792",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "renders/audio/stems/05-finale.wav",
+          "bytes": 8640044,
+          "sha256": "64119c90da7c3ab16cef0fa55646539867f567102a1278e1a3aad11440247c68",
+          "lastCommit": "8702f9d 2026-10-11"
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "zh": "最终视频",
+      "source": "C003 `render:film:*`；C004 `render:final:picture` + `final:mux`",
+      "files": [
+        {
+          "path": "renders/masters/mi-final-1080p.mp4",
+          "bytes": 20031459,
+          "sha256": "3eaa4963c7fc8c28b5716e71893b0b3411e3f382652a57bb663a1b41194eb4ef",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "renders/mi-visual-master-1080p.mp4",
+          "bytes": 19166656,
+          "sha256": "62d80fb0c63a0570085ca067f191cd7be9e1c0bbda4a96f5c3c29acee15599c5",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "renders/mi-preview-540p.mp4",
+          "bytes": 6022748,
+          "sha256": "c795d6409277fa1bafd30d490676ee1c758828768063216c54b4d6ce8b8d6147",
+          "lastCommit": "4cc3e10 2026-10-11"
+        }
+      ]
+    },
+    {
+      "id": "release",
+      "zh": "发行物料",
+      "source": "BLOCKED：等待 C004 人工最终验收与导演审片批准",
+      "files": []
+    },
+    {
+      "id": "licence",
+      "zh": "授权信息",
+      "source": "第三方授权文本（见 C005_IP_ASSET_RECORD.md §授权）",
+      "files": [
+        {
+          "path": "public/fonts/OFL.txt",
+          "bytes": 4301,
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "public/fonts/NotoSerifSC-Medium-caption.ttf",
+          "bytes": 5468,
+          "sha256": "7628fa3b1c5ae80d19182728f1e52ff30c31a5cece1aca30506f89bc7ca6c645",
+          "lastCommit": "89c6e0d 2026-10-11"
+        },
+        {
+          "path": "node_modules/remotion/LICENSE.md",
+          "bytes": 2823,
+          "sha256": "bd65083b940f61904f6ef298aade918a7cad72a3e35bc406e36fab365844b673",
+          "lastCommit": "uncommitted"
+        }
+      ]
+    },
+    {
+      "id": "records",
+      "zh": "创作与修改记录",
+      "source": "各卡验收与证据",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 6829,
+          "sha256": "41862101597e472934dfa707ac1826fa9d6a3a062ceeb5ae1a6a37b5571d1be6",
+          "lastCommit": "7e538e7 2026-10-11"
+        },
+        {
+          "path": "ACCEPTANCE.md",
+          "bytes": 4771,
+          "sha256": "300b625e73bd3ff2921411f5b5c4de43ca2f7cc5cce69c99f42c2b0022d42b17",
+          "lastCommit": "4ee567f 2026-10-10"
+        },
+        {
+          "path": "docs/DECISIONS.md",
+          "bytes": 10072,
+          "sha256": "a453f6ca8096531e9e2bc6ffceca2cc961a1b884ba768198af363661f5a61807",
+          "lastCommit": "7e538e7 2026-10-11"
+        },
+        {
+          "path": "docs/C002_ACCEPTANCE.md",
+          "bytes": 7398,
+          "sha256": "3d39be8d9f4385d27d134542d51607b8f62d7409d8442035d0d79e61d1c0a243",
+          "lastCommit": "4ec5e9f 2026-10-10"
+        },
+        {
+          "path": "docs/C003_ACCEPTANCE.md",
+          "bytes": 6936,
+          "sha256": "84f57da1fd2cb2b1197dddc9a22704d2ec6d86e232ee4d270a843232a533417b",
+          "lastCommit": "48fab86 2026-10-11"
+        },
+        {
+          "path": "docs/C004_ACCEPTANCE.md",
+          "bytes": 5140,
+          "sha256": "4a1f901ec2d4727d2832d5f3026a7d80204d8bab67d8d3302be732b3fee67b76",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/C004_RENDER_REPORT.md",
+          "bytes": 4558,
+          "sha256": "9d4d92ece0987bc86e8b2b62619b462d3520e7ca8ea8e0ca738eda4482acda09",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/C004_AUDIO_QC.md",
+          "bytes": 5959,
+          "sha256": "079e3fd307b1b250a844dd2bf381a55942e09088ba35b2c120ebb237d7924ff5",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/C005_TECHNICAL_QC.md",
+          "bytes": 4801,
+          "sha256": "ad4a65aaa69a4bed3857dd7857273e6120e4fd7d580fb2af2caf6986defda69f",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/C005_DIRECTOR_REVIEW.md",
+          "bytes": 7303,
+          "sha256": "e08374b5920ef0b70926146d02bae6e7bfd051fb9f43e1c1893f899ce5ff9d0e",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/C005_RELEASE_PLAN.md",
+          "bytes": 5171,
+          "sha256": "1d0a8ea7882b9fe3ea91e5f4543484ed2a624cd61c1dfc2c760e74c7f0bf1a9c",
+          "lastCommit": "e68a5be 2026-10-14"
+        },
+        {
+          "path": "docs/C005_IP_ASSET_RECORD.md",
+          "bytes": 4931,
+          "sha256": "e5f22250caacefee2d0ca722c689c2125643516c2682fbdcc83003e552ad5111",
+          "lastCommit": "e68a5be 2026-10-14"
+        },
+        {
+          "path": "docs/C005_FINAL_ACCEPTANCE.md",
+          "bytes": 3454,
+          "sha256": "c2acf6f7439dd32dafc7c1088c72e4eb8f562c44c057a9bcd85de2595695e349",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c002/anchor-tracking.json",
+          "bytes": 5410,
+          "sha256": "7534e1c86b753707855fa9a8a88cfea79a3d99625c95fdbae467b3d7bc99122c",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/debugger-expected.json",
+          "bytes": 5576,
+          "sha256": "aaaa888f0a2ba8b705691c0e7e2f7cdbc685a4411fae97ac80db38674c4cd52f",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/debugger/after-reset.png",
+          "bytes": 194235,
+          "sha256": "0880df345eb120d930cad871ffbf560a497796f3f8c693081d1e48eb3cede8ec",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/debugger/constraint-violation.png",
+          "bytes": 198223,
+          "sha256": "73ec6e62a742259f8c6a5b1038a45ed140df18e969ccdc45781d370dfa433658",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/debugger/debugger-check.json",
+          "bytes": 6989,
+          "sha256": "c5f6d3c12db4645e883e72afca069132c937e037ddf08ae0a63a06f60ff110bf",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/debugger/default.png",
+          "bytes": 194535,
+          "sha256": "31b37035096aa5b1048d41c9a58f7e930193c1da66116491cbd14ce210c36d6e",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/debugger/manual.png",
+          "bytes": 260794,
+          "sha256": "a43a51764a733507b894a72f7c91b666d17db5906eb9f039dbe3bfddd6e15d1f",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/debugger/motion-f150.png",
+          "bytes": 188490,
+          "sha256": "91c9c5d5232000a2be6182d0ce68edf292480bdd8dc15bb66568d6bca8266560",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/debugger/motion-f450.png",
+          "bytes": 180892,
+          "sha256": "09cd05a388dca33b442a05485f6cdf75568a7788c1ccc31f9d04af0d21d3e9d1",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/debugger/motion-f899.png",
+          "bytes": 197612,
+          "sha256": "712adafa8a22b6754fbc0131fe733f9a0740081a363260dce9b4332dcf6e9e81",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/property/_selftest-expected-failures.json",
+          "bytes": 2449,
+          "sha256": "dde21e6a4dcb01da78da83e5d9e56c542dcfdca8e08047d53c604633c1f04d48",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/property/anchor-recovery.json",
+          "bytes": 214,
+          "sha256": "b922c498d1d9c3223248430151e5995992ad2e380c4b67512e0b0457bf10ccf7",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/property/inverse-identity-compositions.json",
+          "bytes": 242,
+          "sha256": "90f2a8e83ab4fdc4828c7e57280e00dc621ceb20e739d933f82a93b8b74edf62",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/property/inverse-identity.json",
+          "bytes": 216,
+          "sha256": "875514c14caf66661f5b177b87923c38a63367aa6a912c42f5d2836a19051779",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/property/knot-geometry.json",
+          "bytes": 210,
+          "sha256": "cbb65ec0b0a6c4466a0b0a7b8c1bbe0eb1fa64dd817d9c152caaa8ce260eb8e9",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/property/legal-params.json",
+          "bytes": 208,
+          "sha256": "93153ef8c9aa6e53e044600b43ab34c041d15be99c65b5c91aefca8e685434cf",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/property/motion-time.json",
+          "bytes": 206,
+          "sha256": "8e868a47deddecbd2146dad6cbc327d5fabcabc02aa8c82cee74044762723879",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/property/orientation.json",
+          "bytes": 206,
+          "sha256": "55d3f3f63ddf22bb3c4825465e847159e52cf071abbc28fa542be3234b864122",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/property/pulse-phase.json",
+          "bytes": 206,
+          "sha256": "2a309fca4046b267d1f36b8e8c4ed92dc350f8c763bbfdbec845b8071acb0901",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/vitest.json",
+          "bytes": 26573,
+          "sha256": "69feb3318f97d678e694d381dd0549a3030ed4b349cba77108437881f480cd76",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c002/vitest.txt",
+          "bytes": 10334,
+          "sha256": "bacffffbdd3bcf37825c38ba72048e40562fee584eb3a134c10b3648202f6dfd",
+          "lastCommit": "bde887f 2026-10-10"
+        },
+        {
+          "path": "docs/evidence/c003/acceptance-c003.log",
+          "bytes": 29291,
+          "sha256": "9f851c1b605939256d8b50fdd85df86049f16b49eaa83d8324b09b037d08dbf5",
+          "lastCommit": "4478117 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/camera-continuity.json",
+          "bytes": 1595,
+          "sha256": "3b3da5a61b99e3b005ae723c04d5297685c29499a97e71b49310243163477de6",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/envelope-continuity.json",
+          "bytes": 1237,
+          "sha256": "a08eafa12923d379a5a97b81817a6b9f962bd1a8b1782eccf94af2b8ae22f765",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/film-geometry.json",
+          "bytes": 182,
+          "sha256": "cccfc77d8b423d32dcf11aa91f278adeaf9ed103b9b08573c134b077f103f439",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/film-plan.json",
+          "bytes": 2079,
+          "sha256": "3ff145c7ec092e0d920cc3518e4ce61aa57932eca9550eea68efd08e5bb34516",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/integration-studio-mi-film.png",
+          "bytes": 293062,
+          "sha256": "041847756881c58d38483494d95c46b261e833fe567b1d36bc849ba0585223b7",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/integration.json",
+          "bytes": 1573,
+          "sha256": "eb8d9c50220bc6a5b8a802a8588adf4633372cac5d81e984c5d871ec73fadf31",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/prior/c001-acceptance-run.log",
+          "bytes": 3848,
+          "sha256": "cab3da93e32fb3485e53f577533570b9d15d593ce566544dcd7442b3ecc9057d",
+          "lastCommit": "4478117 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/prior/c002-acceptance-run.log",
+          "bytes": 20561,
+          "sha256": "e0279eb3750b009d951a3ab10f31fa5a06f9fb1b6de2ce1570d0c621642cba98",
+          "lastCommit": "4478117 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/render-logs/render-master-1080p.json",
+          "bytes": 1090,
+          "sha256": "36625590128a2b6ca9dcf55fb7a21439fb2fa0e4a44b52b6146df78fc91fcf6e",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/render-logs/render-preview-540p.json",
+          "bytes": 1085,
+          "sha256": "6318da040de8eeedcf2fa1e6153a958cb1f4c889feea1f3cf291c1574b54c536",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/render-logs/stills-A.json",
+          "bytes": 6517,
+          "sha256": "4e4f01616802f709bfab21b6135d5bf6eaa4a44803425489ed8e466ee2a9eb06",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/render-logs/stills-A.stdout.txt",
+          "bytes": 4956,
+          "sha256": "79a267e20b7b8d342527c900eff709b52939cd46b1c09f3b16d04d56a040b8fb",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/render-logs/stills-B.json",
+          "bytes": 2471,
+          "sha256": "3bae9946f01726f05e1255917657887427096b22b8078a69ac143b0043e633b6",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/render-logs/stills-B.stdout.txt",
+          "bytes": 1719,
+          "sha256": "48423ad76b15e05564e6122a53678f41c76a613b54144086227296ddb505c1a6",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/render-logs/stills-caption-off.json",
+          "bytes": 1817,
+          "sha256": "1c5ce4f0f8f3e7688e93b5b6a92bd92532bc7921b148dbf4cc9b70184f61daa1",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/render-logs/stills-caption-off.stdout.txt",
+          "bytes": 1199,
+          "sha256": "44ba4887a6dda9f75263f7eff306daa26a31bc401d6b7f4e4bccbd9f257d6ce7",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/verify-film.json",
+          "bytes": 6157,
+          "sha256": "87d6b7dc83e7ce2735e313a7f3be16577eeb6b1f867a2019b37f534ccad73280",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/vitest.json",
+          "bytes": 37791,
+          "sha256": "f0f73699bcbeb4320a0a3102eee751b1bb3cc7e7eeef0944bd6cf3ca090813cb",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c003/vitest.txt",
+          "bytes": 14709,
+          "sha256": "b44cd5ef88f96daf14b07471e0750c84e2cfac689f6858b00d7f3013cdb0eeb6",
+          "lastCommit": "4cc3e10 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/acceptance-c004.log",
+          "bytes": 40310,
+          "sha256": "6ae85259095381f2ab762ed64e1130002f949d7ff3c8ea6212570ed826f9ad8e",
+          "lastCommit": "2420b95 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/audio-determinism.json",
+          "bytes": 1380,
+          "sha256": "82fef354facfc4d9269466d727192fee84ef9ab6d0375f42d56929136a785e9c",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/audio-report.json",
+          "bytes": 6278,
+          "sha256": "beca3a35b9408d7ad3ab85dc33da23cdc76d91bc4560f66f3f2bf6347db5e096",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/ffprobe-final.json",
+          "bytes": 4329,
+          "sha256": "5d5326d84c1f8ef6b489f4d164c74b855080bfa74dc91a4f622ed8eeb4a6ecf1",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/final-fixture.json",
+          "bytes": 48453,
+          "sha256": "fe8bd11df93299f8406f6f6d26ee5c7ab7f55d787ed52b1182d8368d23a6d0d1",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/integration.json",
+          "bytes": 1700,
+          "sha256": "391eeb1787ad544dd0f04caa116c698f64a8c1ce8a2e6a72d319337a48cd6107",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/qc-final.json",
+          "bytes": 21585,
+          "sha256": "41c5f126b18276baccb012b66206601d66af2784c3f2f64ab3b7d631fb25baa3",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/qc-frames/final-f845.png",
+          "bytes": 495613,
+          "sha256": "05b6b5296331102d1fbc1154faa1dcc70505e40a6e235d451e8e163db7d8bd55",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/qc-frames/final-f855.png",
+          "bytes": 524294,
+          "sha256": "b8f89f039d944811f9671116020ffb637a060d465bd577710eef3012a9fbfe98",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/qc-frames/final-f892.png",
+          "bytes": 527365,
+          "sha256": "b1186e98885fa160ab1d0fef67dfa32476d91a564804e29d47a21f5f2254b645",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/render-logs/qc-stills-film-nocap.json",
+          "bytes": 2717,
+          "sha256": "eda9300946db93ce372715276d8f0b5a258fe748ec01b5f1443925f70c35a9a9",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/render-logs/qc-stills-film-nocap.stdout.txt",
+          "bytes": 1918,
+          "sha256": "3ad282016ec4687faf50393a78acbb72f06ac1f814d993e80b33177f8f38c49a",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/render-logs/qc-stills-film.json",
+          "bytes": 2207,
+          "sha256": "503a688077410f59356822a77cfb4e02ccc11b5b84a95a9ea13985374188a55c",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/render-logs/qc-stills-film.stdout.txt",
+          "bytes": 1500,
+          "sha256": "b58b8ff4e50a93362f2733edee2c5382508873af73a090c2b06a6ee022c4eb96",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/render-logs/qc-stills-final.json",
+          "bytes": 3748,
+          "sha256": "cf126307ccd14dad3713972825281ad72c8eca7faa1142f85dd16bd3ce41ef9f",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/render-logs/qc-stills-final.stdout.txt",
+          "bytes": 2757,
+          "sha256": "4db80e3a67ca045b56d72962e5d1873f8e3dc12166bf1311676c200d025f60ac",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/render-logs/render-final-picture-1080p.json",
+          "bytes": 1070,
+          "sha256": "edc3af801aa7d8f467890b1de37829ac4fe03b6d0346668f82a2bea7c79316e4",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/verify-film.json",
+          "bytes": 6157,
+          "sha256": "87d6b7dc83e7ce2735e313a7f3be16577eeb6b1f867a2019b37f534ccad73280",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/vitest.json",
+          "bytes": 42779,
+          "sha256": "7a71df75d1a1c4108a6cc24cf6e2d0c65d09edf5c51195e49e86a7569a268f33",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c004/vitest.txt",
+          "bytes": 16639,
+          "sha256": "dfbdef46452ded8a76ff5f9e0ff268508697fb8d91e8c395c7193039e4866c10",
+          "lastCommit": "8702f9d 2026-10-11"
+        },
+        {
+          "path": "docs/evidence/c005/c005-qc.log",
+          "bytes": 30032,
+          "sha256": "a3ce2be86c3f9defe8d469343c68f56cacbaf4ad63cb26f13e1dcc462b6dfb4c",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c005/camera-continuity.json",
+          "bytes": 1595,
+          "sha256": "3b3da5a61b99e3b005ae723c04d5297685c29499a97e71b49310243163477de6",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c005/envelope-continuity.json",
+          "bytes": 1237,
+          "sha256": "a08eafa12923d379a5a97b81817a6b9f962bd1a8b1782eccf94af2b8ae22f765",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c005/ffprobe.json",
+          "bytes": 4404,
+          "sha256": "7d9ebce268e2a5625c3e099975000da792b658a20ac929ea4c968ed8585020aa",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c005/frame-qc.csv",
+          "bytes": 73135,
+          "sha256": "ec1188f270158d5c403209817b5a69040890d723d4516009d51bcbd2f6fc4f2b",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c005/frame-qc.json",
+          "bytes": 266164,
+          "sha256": "f0561c755dc623348f566f730bd10a0de2cb6e93317c9f8dcc789b75e85e3d6a",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c005/identity-check.json",
+          "bytes": 489,
+          "sha256": "53f66863b26521a1ae5d1ed57a293c12b86d237406aefb6bad270749a539303d",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c005/integration.json",
+          "bytes": 1700,
+          "sha256": "391eeb1787ad544dd0f04caa116c698f64a8c1ce8a2e6a72d319337a48cd6107",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c005/qc-final.json",
+          "bytes": 21585,
+          "sha256": "41c5f126b18276baccb012b66206601d66af2784c3f2f64ab3b7d631fb25baa3",
+          "lastCommit": "uncommitted"
+        },
+        {
+          "path": "docs/evidence/c005/vitest.txt",
+          "bytes": 16641,
+          "sha256": "e0c4f38cc52b991cb237eca7ad5056405a41c33c5a43969b1974e9bacb4bc0c8",
+          "lastCommit": "uncommitted"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,873 @@
+{
+  "rows": [
+    [
+      "streams: exactly 1 video + 1 audio",
+      true,
+      "1 video, 1 audio"
+    ],
+    [
+      "video H.264 1920×1080",
+      true,
+      "h264 1920×1080 yuv420p"
+    ],
+    [
+      "video 30 fps",
+      true,
+      "30/1 / 30/1"
+    ],
+    [
+      "video exactly 900 frames",
+      true,
+      "decoded 900, container 900"
+    ],
+    [
+      "video duration ≈ 30 s",
+      true,
+      "30.000000 s"
+    ],
+    [
+      "audio AAC 48 kHz stereo",
+      true,
+      "aac 48000 Hz 2 ch stereo 222 kb/s"
+    ],
+    [
+      "audio duration ≈ 30 s",
+      true,
+      "30.000000 s"
+    ],
+    [
+      "container duration ≈ 30 s",
+      true,
+      "30.000000 s"
+    ],
+    [
+      "A/V start aligned (container)",
+      true,
+      "video 0.000000, audio 0.000000"
+    ],
+    [
+      "audio: no NaN/Infinity",
+      true,
+      "0 non-finite of 2881536"
+    ],
+    [
+      "loudness cross-check (loudnorm analyser)",
+      true,
+      "input_i -15.83 LUFS, input_tp -5.46 dBTP, input_lra 10.50 LU"
+    ],
+    [
+      "loudness ≈ −16 LUFS (±1 LU)",
+      true,
+      "-16 LUFS integrated (LRA 10.8 LU)"
+    ],
+    [
+      "true peak ≤ −1 dBTP",
+      true,
+      "-5.5 dBTP"
+    ],
+    [
+      "no clipping",
+      true,
+      "sample peak -5.46 dBFS, 0 samples ≥ 0.999"
+    ],
+    [
+      "no DC offset (|mean| < 1e-4)",
+      true,
+      "L -1.05e-6, R 6.70e-6"
+    ],
+    [
+      "no head/tail click",
+      true,
+      "first -4.0e-11, last -3.1e-11, max step head 1.0e-9 tail 1.5e-6"
+    ],
+    [
+      "no unexpected silence (designed head/tail allowed)",
+      true,
+      "1 silent spans [[0,0.42075]]; unexpected 0"
+    ],
+    [
+      "both channels carry signal (no dead track)",
+      true,
+      "RMS L -16.5 dBFS, R -16.9 dBFS"
+    ],
+    [
+      "all five stems non-silent",
+      true,
+      "body -17.8 LUFS, pulse -21.4 LUFS, grains -30 LUFS, resonance -27.1 LUFS, finale -26.9 LUFS"
+    ],
+    [
+      "no abnormal black frames (designed ACT I fade allowed)",
+      true,
+      "fully black spans [[0,1.5]]; outside ACT I: 0; mostly-dark (info) [[0,7.2]]"
+    ],
+    [
+      "last frame has content (no black tail)",
+      true,
+      "max luma 255"
+    ],
+    [
+      "caption f839 (27.97 s)",
+      true,
+      "expected opacity 0.000, measured 0.000, 0 px"
+    ],
+    [
+      "caption f840 (28.00 s)",
+      true,
+      "expected opacity 0.000, measured 0.000, 0 px"
+    ],
+    [
+      "caption f845 (28.17 s)",
+      true,
+      "expected opacity 0.210, measured 0.211, 10297 px bbox x538–1347 y869–925"
+    ],
+    [
+      "caption f850 (28.33 s)",
+      true,
+      "expected opacity 0.790, measured 0.784, 27542 px bbox x536–1351 y865–925"
+    ],
+    [
+      "caption f855 (28.50 s)",
+      true,
+      "expected opacity 1.000, measured 0.996, 31787 px bbox x535–1353 y864–925"
+    ],
+    [
+      "caption f870 (29.00 s)",
+      true,
+      "expected opacity 1.000, measured 1.000, 31839 px bbox x535–1353 y864–925"
+    ],
+    [
+      "caption f885 (29.50 s)",
+      true,
+      "expected opacity 1.000, measured 1.000, 31839 px bbox x535–1353 y864–925"
+    ],
+    [
+      "caption f892 (29.73 s)",
+      true,
+      "expected opacity 0.562, measured 0.562, 20574 px bbox x538–1347 y869–925"
+    ],
+    [
+      "caption f899 (29.97 s)",
+      true,
+      "expected opacity 0.003, measured 0.003, 0 px"
+    ],
+    [
+      "caption overlaid exactly once (f870 = C003 caption frame)",
+      true,
+      "pixel-identical"
+    ],
+    [
+      "QC renders: no error/WebGL messages",
+      true,
+      "0"
+    ],
+    [
+      "C003 visual master file unchanged",
+      true,
+      "62d80fb0c63a0570"
+    ],
+    [
+      "picture identical to C003 before caption (renders)",
+      true,
+      "f0:= f101:= f300:= f480:= f690:= f839:="
+    ],
+    [
+      "final vs frozen master f0–839 (decoded PSNR)",
+      true,
+      "average 68.405094 dB, min 50.335144 dB"
+    ],
+    [
+      "identity pulses on C002 times (25 pulses, ≤ 1 frame)",
+      true,
+      "worst 14.5 ms"
+    ],
+    [
+      "measured pulse period = C002 period (15 intervals, 9–26.5 s)",
+      true,
+      "3 s spec; measured 2.9999–3.0001 s"
+    ],
+    [
+      "measured phase offsets = C002 offsets",
+      true,
+      "A2−A1 0.3333, A3−A1 0.6667 (spec 0.0000, 0.3333, 0.6667)"
+    ],
+    [
+      "audio identity mapping = C002 spec",
+      true,
+      "ids A1/A2/A3, offsets 0.0000/0.3333/0.6667, period 3 s, seed 0x4b4c4d49"
+    ],
+    [
+      "A/V sync A1 @3.375 s",
+      true,
+      "picture peak f101.58, sound peak f101.49, expected f101.25, A/V offset 2.9 ms"
+    ],
+    [
+      "A/V sync A1 @27.375 s",
+      true,
+      "picture peak f821.33, sound peak f821.25, expected f821.25, A/V offset 2.5 ms"
+    ],
+    [
+      "A/V sync A2 @28.375 s",
+      true,
+      "picture peak f851.19, sound peak f851.25, expected f851.25, A/V offset -1.8 ms"
+    ],
+    [
+      "A/V sync A3 @29.375 s",
+      true,
+      "picture peak f880.41, sound peak f881.25, expected f881.25, A/V offset -28.0 ms"
+    ]
+  ],
+  "details": {
+    "design": {
+      "blackWindow": [
+        0,
+        5
+      ],
+      "silenceHead": [
+        0,
+        1.5
+      ],
+      "silenceTail": [
+        29,
+        30.05
+      ]
+    },
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1088,
+          "closed_captions": 0,
+          "film_grain": 0,
+          "has_b_frames": 2,
+          "pix_fmt": "yuv420p",
+          "level": 40,
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "refs": 4,
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "5109967",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "nb_read_frames": "900",
+          "extradata_size": 47,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "vendor_id": "[0][0][0][0]"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 1440000,
+          "duration": "30.000000",
+          "bit_rate": "222377",
+          "nb_frames": "1408",
+          "nb_read_frames": "1407",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler",
+            "vendor_id": "[0][0][0][0]"
+          }
+        }
+      ],
+      "format": {
+        "filename": "renders/masters/mi-final-1080p.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "20031459",
+        "bit_rate": "5341722",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "title": "弥：拓扑生命 Mi: Topological Life",
+          "encoder": "Lavf60.16.100",
+          "comment": "Made with Remotion 4.0.525"
+        }
+      }
+    },
+    "audio": {
+      "samples": 1440768,
+      "nonFinite": 0,
+      "samplePeak": 0.5333618521690369,
+      "samplePeakDbfs": -5.4595609947056625,
+      "nearFullScale": 0,
+      "dcL": -0.0000010462521347201953,
+      "dcR": 0.000006697615126359116,
+      "integratedLufs": -16,
+      "lraLu": 10.8,
+      "truePeakDbtp": -5.5,
+      "first": [
+        -3.988037677871148e-11,
+        -3.971319453843769e-11
+      ],
+      "last": [
+        -3.145804797211049e-11,
+        -3.691522434956518e-11
+      ],
+      "loudnormCrossCheck": {
+        "input_i": "-15.83",
+        "input_tp": "-5.46",
+        "input_lra": "10.50",
+        "input_thresh": "-26.24",
+        "output_i": "-13.78",
+        "output_tp": "-3.70",
+        "output_lra": "2.80",
+        "output_thresh": "-23.96",
+        "normalization_type": "dynamic",
+        "target_offset": "-2.22"
+      }
+    },
+    "silences": [
+      [
+        0,
+        0.42075
+      ]
+    ],
+    "blacks": {
+      "fullyBlack": [
+        [
+          0,
+          1.5
+        ]
+      ],
+      "mostlyDarkInformational": [
+        [
+          0,
+          7.2
+        ]
+      ]
+    },
+    "caption": [
+      {
+        "frame": 839,
+        "sum": 0,
+        "count": 0,
+        "bbox": null,
+        "expectedOpacity": 0,
+        "measuredRelative": 0
+      },
+      {
+        "frame": 840,
+        "sum": 0,
+        "count": 0,
+        "bbox": null,
+        "expectedOpacity": 0,
+        "measuredRelative": 0
+      },
+      {
+        "frame": 845,
+        "sum": 1550589,
+        "count": 10297,
+        "bbox": [
+          538,
+          869,
+          1347,
+          925
+        ],
+        "expectedOpacity": 0.20987654320988003,
+        "measuredRelative": 0.21095361205184113
+      },
+      {
+        "frame": 850,
+        "sum": 5764351,
+        "count": 27542,
+        "bbox": [
+          536,
+          865,
+          1351,
+          925
+        ],
+        "expectedOpacity": 0.79012345679012,
+        "measuredRelative": 0.7842250039079618
+      },
+      {
+        "frame": 855,
+        "sum": 7322048,
+        "count": 31787,
+        "bbox": [
+          535,
+          864,
+          1353,
+          925
+        ],
+        "expectedOpacity": 1,
+        "measuredRelative": 0.9961456409254543
+      },
+      {
+        "frame": 870,
+        "sum": 7350379,
+        "count": 31839,
+        "bbox": [
+          535,
+          864,
+          1353,
+          925
+        ],
+        "expectedOpacity": 1,
+        "measuredRelative": 1
+      },
+      {
+        "frame": 885,
+        "sum": 7347893,
+        "count": 31839,
+        "bbox": [
+          535,
+          864,
+          1353,
+          925
+        ],
+        "expectedOpacity": 1,
+        "measuredRelative": 0.9996617861473538
+      },
+      {
+        "frame": 892,
+        "sum": 4127280,
+        "count": 20574,
+        "bbox": [
+          538,
+          869,
+          1347,
+          925
+        ],
+        "expectedOpacity": 0.5623150617283916,
+        "measuredRelative": 0.5615057400441529
+      },
+      {
+        "frame": 899,
+        "sum": 25256,
+        "count": 0,
+        "bbox": null,
+        "expectedOpacity": 0.002674567901235103,
+        "measuredRelative": 0.003436013299450273
+      }
+    ],
+    "psnr0to839": {
+      "average": "68.405094",
+      "min": "50.335144"
+    },
+    "audioPulses": [
+      {
+        "id": "A1",
+        "expected": 3.375,
+        "measured": 3.3829311221863354,
+        "errorMs": 7.931122186335404
+      },
+      {
+        "id": "A1",
+        "expected": 6.375,
+        "measured": 6.389345776022519,
+        "errorMs": 14.345776022518741
+      },
+      {
+        "id": "A1",
+        "expected": 9.375,
+        "measured": 9.375006969980484,
+        "errorMs": 0.006969980484328175
+      },
+      {
+        "id": "A1",
+        "expected": 12.375,
+        "measured": 12.374977647270374,
+        "errorMs": -0.02235272962636259
+      },
+      {
+        "id": "A1",
+        "expected": 15.375,
+        "measured": 15.375030941561956,
+        "errorMs": 0.03094156195615483
+      },
+      {
+        "id": "A1",
+        "expected": 18.375,
+        "measured": 18.375021018416817,
+        "errorMs": 0.021018416816787067
+      },
+      {
+        "id": "A1",
+        "expected": 21.375,
+        "measured": 21.374924008484737,
+        "errorMs": -0.07599151526349601
+      },
+      {
+        "id": "A1",
+        "expected": 24.375,
+        "measured": 24.37484383927019,
+        "errorMs": -0.15616072980861873
+      },
+      {
+        "id": "A1",
+        "expected": 27.375,
+        "measured": 27.37505217078136,
+        "errorMs": 0.052170781358995555
+      },
+      {
+        "id": "A2",
+        "expected": 7.375,
+        "measured": 7.389450591441943,
+        "errorMs": 14.450591441942606
+      },
+      {
+        "id": "A2",
+        "expected": 10.375,
+        "measured": 10.375011658644286,
+        "errorMs": 0.011658644286427489
+      },
+      {
+        "id": "A2",
+        "expected": 13.375,
+        "measured": 13.37496208909252,
+        "errorMs": -0.0379109074799544
+      },
+      {
+        "id": "A2",
+        "expected": 16.375,
+        "measured": 16.375016496628685,
+        "errorMs": 0.016496628685302994
+      },
+      {
+        "id": "A2",
+        "expected": 19.375,
+        "measured": 19.375083701207526,
+        "errorMs": 0.08370120752587695
+      },
+      {
+        "id": "A2",
+        "expected": 22.375,
+        "measured": 22.375003544690482,
+        "errorMs": 0.003544690482470969
+      },
+      {
+        "id": "A2",
+        "expected": 25.375,
+        "measured": 25.37502668295036,
+        "errorMs": 0.02668295035945789
+      },
+      {
+        "id": "A2",
+        "expected": 28.375,
+        "measured": 28.37496957801159,
+        "errorMs": -0.030421988409301548
+      },
+      {
+        "id": "A3",
+        "expected": 8.375,
+        "measured": 8.381392756920459,
+        "errorMs": 6.392756920458709
+      },
+      {
+        "id": "A3",
+        "expected": 11.375,
+        "measured": 11.375020663201045,
+        "errorMs": 0.020663201045323376
+      },
+      {
+        "id": "A3",
+        "expected": 14.375,
+        "measured": 14.37496740396361,
+        "errorMs": -0.032596036389165306
+      },
+      {
+        "id": "A3",
+        "expected": 17.375,
+        "measured": 17.3750311314413,
+        "errorMs": 0.031131441300402685
+      },
+      {
+        "id": "A3",
+        "expected": 20.375,
+        "measured": 20.374975938778594,
+        "errorMs": -0.02406122140641287
+      },
+      {
+        "id": "A3",
+        "expected": 23.375,
+        "measured": 23.374985415679692,
+        "errorMs": -0.014584320307875487
+      },
+      {
+        "id": "A3",
+        "expected": 26.375,
+        "measured": 26.375016277053653,
+        "errorMs": 0.01627705365336851
+      },
+      {
+        "id": "A3",
+        "expected": 29.375,
+        "measured": 29.374954006308656,
+        "errorMs": -0.04599369134439257
+      }
+    ],
+    "measuredProtocol": {
+      "steadyWindow": [
+        9,
+        26.5
+      ],
+      "periods": [
+        2.9999706772898893,
+        3.0000532942915825,
+        2.9999900768548606,
+        2.9999029900679197,
+        2.999919830785455,
+        2.9999504304482336,
+        3.0000544075361653,
+        3.0000672045788406,
+        2.9999198434829566,
+        3.000023138259877,
+        2.9999467407625655,
+        3.0000637274776896,
+        2.999944807337293,
+        3.0000094769010985,
+        3.0000308613739612
+      ],
+      "offsetsFromA1": [
+        0.3333499860127389,
+        0.6666773558407413
+      ]
+    },
+    "visualSync": [
+      {
+        "anchor": "A1",
+        "expectedFrame": 101.25,
+        "visualFrame": 101.57620183542406,
+        "fwhm": {
+          "centre": 101.57620183542406,
+          "rise": 95.66153455571227,
+          "fall": 107.49086911513587,
+          "peakExcess": 31.56878744875432
+        },
+        "audioFrame": 101.48793366559006,
+        "avOffsetFrames": 0.0882681698339951,
+        "luma": [
+          81.99385052034059,
+          83.47824030274361,
+          86.34862819299906,
+          89.08561967833491,
+          93.81646168401136,
+          98.85903500473037,
+          103.92667928098392,
+          108.83017975402082,
+          114.85099337748345,
+          119.6329233680227,
+          124.05250709555345,
+          128.00709555345318,
+          130.44087038789024,
+          131.89167455061494,
+          132.65988647114474,
+          131.82024597918638,
+          130.26064333017976,
+          128.14947965941343,
+          125.34389782403028,
+          122.29848628193,
+          119.2639545884579,
+          117.12724692526017,
+          115.59602649006622,
+          114.98202459791864,
+          115.83207190160833
+        ]
+      },
+      {
+        "anchor": "A1",
+        "expectedFrame": 821.25,
+        "visualFrame": 821.3261876201415,
+        "fwhm": {
+          "centre": 821.3261876201415,
+          "rise": 814.0463163491045,
+          "fall": 828.6060588911785,
+          "peakExcess": 35.619542367625826
+        },
+        "audioFrame": 821.2515651234407,
+        "avOffsetFrames": 0.07462249670072651,
+        "luma": [
+          163.10046948356808,
+          163.02023529411764,
+          165.22808671065033,
+          168.86490316485592,
+          176.44058243306716,
+          185.01700519603213,
+          193.5816037735849,
+          201.82375117813385,
+          204.07808090310442,
+          206.11753643629524,
+          207.64423529411764,
+          208.03383458646616,
+          207.8233082706767,
+          207.98071495766698,
+          207.63486842105263,
+          207.30870588235294,
+          206.97739048516252,
+          205.8334901222954,
+          204.06964705882353,
+          201.88293370944993,
+          196.1478342749529,
+          190.01597744360902,
+          186.03108808290156,
+          184.1854117647059,
+          184.51860574658502
+        ]
+      },
+      {
+        "anchor": "A2",
+        "expectedFrame": 851.25,
+        "visualFrame": 851.1943566465286,
+        "fwhm": {
+          "centre": 851.1943566465286,
+          "rise": 843.4172556546118,
+          "fall": 858.9714576384455,
+          "peakExcess": 25.656592975854522
+        },
+        "audioFrame": 851.2490873403477,
+        "avOffsetFrames": -0.0547306938191241,
+        "luma": [
+          181.8513640639699,
+          181.79821260583256,
+          183.41392285983068,
+          186.10253998118532,
+          191.8217309501411,
+          197.7154280338664,
+          201.1241768579492,
+          203.19849482596425,
+          205.04985888993414,
+          205.7709313264346,
+          206.11712135465663,
+          206.3301975540922,
+          206.33584195672626,
+          206.33443085606774,
+          206.19049858889935,
+          205.77845719661335,
+          205.40592662276575,
+          203.97648165569143,
+          202.03574788334902,
+          199.34619002822203,
+          192.68673565380996,
+          186.09830667920977,
+          181.38005644402634,
+          179.66886171213545,
+          179.68485418626528
+        ]
+      },
+      {
+        "anchor": "A3",
+        "expectedFrame": 881.25,
+        "visualFrame": 880.4071759090577,
+        "fwhm": {
+          "centre": 880.4071759090577,
+          "rise": 872.698025370243,
+          "fall": 888.1163264478726,
+          "peakExcess": 14.394903710662277
+        },
+        "audioFrame": 881.2486201892597,
+        "avOffsetFrames": -0.8414442802019266,
+        "luma": [
+          169.56505401596993,
+          169.97369657116016,
+          172.5481446688586,
+          175.25317050258337,
+          180.15500234852044,
+          184.4335368717708,
+          185.91122592766558,
+          187.24941286989196,
+          188.09112259276657,
+          188.6139032409582,
+          188.95349929544386,
+          189.1362141850634,
+          189.13997181775483,
+          189.15547205260685,
+          189.14513856270548,
+          188.9577266322217,
+          188.52137153593236,
+          188.21982151244717,
+          187.61531235321746,
+          186.81211836542977,
+          185.39830906528886,
+          184.47862846406764,
+          183.1216533583842,
+          182,
+          181.97557538750587
+        ]
+      }
+    ]
+  }
+}
