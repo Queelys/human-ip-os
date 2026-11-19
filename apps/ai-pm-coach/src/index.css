@@ -11,6 +11,16 @@
   --color-muted: #6b6f76;
   --color-primary: #1e3a5f;
   --color-primary-hover: #16304f;
+  --color-primary-soft: #edf2f8;
+
+  --color-card: #fffefb;
+  --color-disabled: #d9d5ce;
+
+  /* 结果页状态色：≥80 优势 / <60 待补 */
+  --color-good: #2b7a4f;
+  --color-good-soft: #e5f1e9;
+  --color-warn: #b5591a;
+  --color-warn-soft: #f8ebdf;
 }
 
 @layer base {
